@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar/Navbar'
+// import Navbar from './Navbar/Navbar'
 // import Login from '../Container/LoginPage'
 import { Container } from 'react-bootstrap'
 import HomeBanner from './Banner/HomeBanner'
@@ -11,7 +11,7 @@ class Main extends React.Component {
     render() {
         return (
             <Container fluid id="main-component">
-                <Navbar />
+                {/* <Navbar /> */}
                 <HomeBanner />
                 <Footer />               
             </Container>

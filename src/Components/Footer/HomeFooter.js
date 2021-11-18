@@ -27,7 +27,7 @@ return (
 			</i>
 			</FooterLink>
 			<FooterLink>
-            <i className="fab fa-facebook">
+            <i className="fab fa-twitter">
 				<span style={{ marginLeft: "10px" }}>
 				Twitter
 				</span>
@@ -44,9 +44,7 @@ return (
 			</i>
 			</FooterLink>
             
-   
-		
-		</Column>
+   		</Column>
 
 		<Column>
 			<Heading>LOGO HALO KB BUKOPIN</Heading>
