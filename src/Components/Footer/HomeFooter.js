@@ -18,13 +18,15 @@ return (
             <p>Phone. +6221 798 8266, 798 9837
                 Fax. +6221 798 0625, 798 0238</p>
             <p> Connect</p>
-            {/* <FooterLink href="#"> */}
-            <ul>
+            <FooterLink href="#">
+            
 			<i className="fab fa-facebook">
 				<span style={{ marginLeft: "10px" }}>
 				Facebook
 				</span>
 			</i>
+			</FooterLink>
+			<FooterLink>
             <i className="fab fa-facebook">
 				<span style={{ marginLeft: "10px" }}>
 				Twitter
@@ -40,20 +42,20 @@ return (
 				Instagram
 				</span>
 			</i>
-			{/* </FooterLink> */}
-            </ul>
+			</FooterLink>
+            
    
 		
 		</Column>
 
 		<Column>
-			<Heading>HALO KB BUKOPIN</Heading>
+			<Heading>LOGO HALO KB BUKOPIN</Heading>
 			
 		
 		</Column>
 		</Row>
 	</Container>
-    <h1 style={{ color: "grey",
+    <h1 style={{ color: "gold",
 				textAlign: "center",
 				marginBottom: "-50px" }}>
 		Copyright © 2021 PT BANK KB BUKOPIN All Rights Reserved
