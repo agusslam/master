@@ -1,0 +1,687 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+#main-component {
+    padding: 0;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;   
+    padding: 20px 0;  
+    background-color: #FFBC00;
+    flex-basis: 50%;
+}
+
+#navbarhome {
+    width: auto;
+    display: flex;
+    font-size: 30px;
+    font-display:inherit;   
+    padding: 20px 0;  
+    background-color:#ffffff ;
+    flex-basis: 40%;
+    font-weight: bolder;
+    font-family: Roboto;
+
+}
+ .logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    background-image: url(./Images/logo-kbnobg.png);
+}
+
+
+.logo {
+    width: 100%;
+    margin-left: 2%;
+    font-weight: bold; 
+    text-decoration: none;
+    font-size: 24px; 
+    color: 414141;
+    line-height: 33px   
+}
+
+.logo-white {
+    width: 100%;
+    margin-left: 2%;
+    font-weight: bold; 
+    text-decoration: none;
+    font-size: 24px; 
+    color: #545045 ;
+    line-height: 33px   
+}
+
+.menu {
+    width: 100%;
+    padding-right:  2%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px; 
+    color: #545045 ;
+}
+
+.style-nav {
+    color: #ffffff !important;
+    font-size: 24px;
+}
+
+.style-navhome {
+    color: #414141 !important;
+    font-size: 24px;
+}
+
+.style-nav:hover {
+    color: #ffffff67 !important;
+    font-size: 24px;
+}
+
+.style-navhome:hover {
+    color: #07070767 !important;
+    font-size: 24px;
+}
+
+.banner-style {
+    padding: 0;
+    background-position:inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box-text-banner {
+    position: absolute;
+    top: 65%;
+    /* right: 80%; */
+    font-family:Verdana, Tahoma;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 30px;
+    color: #ffffff;
+    font-stretch: normal;
+
+}
+.subscribe {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* color: rgb(247, 239, 9) !important; */
+    border: 1px solid rgb(243, 239, 239);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    background-color: rgb(255, 166, 0);
+}
+
+.subscribehome {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: 414141 !important;
+    border: 1px solid #181d11;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+
+.subscribe:hover {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #ffffff67 !important;
+    border: 1px solid w#45570567;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+
+.image-style {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    filter: brightness(50%)
+}
+
+.image-stylehome {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+.art {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+.arthome {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    font-size: 50px;
+    line-height: 40px;
+    color: #414141;
+}
+
+.description-p-banner{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25mpx;
+    font-style: italic;
+    line-height: 25px;
+    color: #ffffff;
+}
+
+.description-p-bannerhome{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 70px;
+    color: #414141;
+}
+
+.product-style {
+    padding-top: 5%;
+}
+
+.product-bg {
+    /* background-color: #E5E5E5; */
+    background-image: url(../Assets/Images/latar04.png);
+    background-size: cover;
+    background-color: #fafbfc;
+}
+.product-bg1 {
+    background-color: #fafbfc; ;
+    background-image: url(../Assets/Images/latar05.png);
+    background-size: cover;
+}
+
+.product-list h6 {
+    font-family: 'Roboto';
+    font-style: bold;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 0;
+    text-align: center;
+    color: #000000;
+    background-color: #fafbfc;
+}
+
+.btn-detail {
+    margin-top: 60%;
+    padding: 5px 40px;
+    background-color: #877e06;
+}
+
+.img-style {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.list-style {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.wrapper-box-detail-new {
+    padding-right: 70px;
+    height: 400px;
+    margin-bottom: 50px;
+    position: relative;
+   
+}
+
+
+.wrapper-box-detail-home {
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 350px;
+    margin-bottom: 50px;
+    position: relative;
+ 
+   
+}
+
+.wrapper-box-list-new {
+    height: 400px;
+    background-color: #FAFAFA;
+    box-shadow: 3px 3px 15px rgba(21, 21, 21, 0.1);
+    border-radius: 10px;
+    position: absolute;
+    width: 80%;
+   
+}
+
+.wrapper-box-list-new2 {
+    height: 400px;
+    background-color: rgba(103, 106, 103, 0.241);
+    box-shadow: 3px 3px 15px rgba(63, 63, 61, 0.1);
+    border-radius: 10px;
+    position: absolute;
+    width: 80%;
+}
+
+.wrapper-box-list-home {
+    height: 350px;
+    background-color: #ffffff;
+    /* background-color: #f7c707; */
+    box-shadow: 3px 3px 15px rgba(63, 45, 0, 0.556);
+    border-radius: 20px;
+    /* background-image: url(../Assets/Images/latar2.jpg); */
+}
+
+.wrapper-box-list-home p {
+    font-size: 13px;
+}
+
+.wrapper-box-list-home h6 {
+    font-size: 18px;
+}
+
+.img-class {
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-classhome {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.footer-grey {
+    /* margin-top: 5%; */
+    background-color: #686760;
+    height: 100px;
+    width: 100%;
+    display: flex;         
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.product-detail {
+    padding: 0;
+    height: 597px;
+    background-color: #E5E5E5;
+}
+
+.box-left{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper-desc-detail {
+    padding-top: 20px;
+}
+
+.wrapper-desc-detail h6{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box-right {
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.box-right p {
+    font-family: Open Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+    color: #000000;
+    padding-top: 5%;
+}
+
+.box-subscribe {
+    background-color: #F2F2F2;
+    height: 480px;
+    margin-top: 0;
+    padding-left: 35%;
+    padding-right: 35%;
+    align-items: center;
+}
+
+.box-subscribe h6 {    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #414141;
+    text-align: center;
+}
+
+.box-subscribe p {    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #414141;
+    text-align: center;    
+}
+
+.wrapper-subscribe {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.input-subscribe {
+    background-color: #E9ECE9;
+    font-size: 12px;
+    width: 400px;
+    border-radius: 0;
+    border-width: 3px;
+    border-color: white;
+    color: #414141;
+    align-content: center;
+}
+
+.btn-subscribe {
+    margin-top: 10px;
+    /* padding: 5px 10px; */
+    width: 100%;
+}
+
+.footer-home-menu {
+    height: 15px;
+    /* background-color:#60584C  ; */
+    justify-content: center;
+    
+}
+
+.footer-home-menu {
+    width: 100%;
+    padding-right:  2%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px; 
+    height: 30px;
+    font-weight: 600;
+    color: #FFBC00;
+   
+}
+
+/* CSS untuk Detail Product*/
+.box-left-articles {
+    height: 447px;
+    padding-left: 5%;
+    padding-right: 3%;
+}
+
+.image-article {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    border-radius: 5px;
+}
+
+.text-article {
+    padding-right: 3%;
+    padding-top: 5%;
+}
+
+.text-article h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-article p{
+    text-align: justify;
+}
+
+.list-style-detail {
+    height: 300px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 5%;
+}
+
+.wrapper-box-detail {
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 200px;
+    position: relative;
+}
+
+.wrapper-box-list-detail {
+    height: 200px;
+    background-color: #ededed;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.wrapper-price {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    background-color: #fdfdfd;
+    /* padding-bottom: 5%; */
+}
+
+.price-left {
+    height: 368px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.img-price {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 368px;
+    width: 100%;
+}
+
+.price-right {
+    padding-right: 2%;
+    padding-left: 5%;
+}
+
+.wrapper-price-right {
+    background-color:#f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #F2F2F2;
+    height: 368px;
+    padding-left: 20px;
+    padding-right: 0;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+.title-price {
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: #000000;
+    height: 100px;
+}
+
+.list-price {
+    margin-top: -10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.text-price {
+    padding-right: 5%;
+    text-align: end;
+}
+
+.buy-product {
+    background-color: #E5E5E5;
+    padding-bottom: 5%;
+}
+
+.btn-pad {
+    padding-top: 20px;
+    padding-right: 6%;
+}
+
+.btn-grey {
+    background-color: #353534 ;
+    color: #f7f7f7;
+    text-decoration: none;
+    border: none;
+    padding: 10px 30px;
+}
+
+.artic-style {
+    background-color: #E5E5E5;
+}
+/* End CSS Detail */
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* CSS For Info Accordion */
+
+.wrapper-homeinfo {
+    padding-top: 20px;
+    padding-left: 185px;
+    padding-right: 185px;
+    background-color: #545045;
+    /* margin-bottom: 10px; */
+    height:auto;
+}
+
+.title-info{
+    font-size: 40px;
+    color: #ffbc00;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.accor-info {
+    margin-top: 20px;
+}
+
+.bottom-info {
+    height: 50px;
+}
+
+/* CSS Untuk Login Signup */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #edeceadc !important;
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: 'Roboto';
+}
+
+h1,h2,h3,h4,h5,h6,label,span {
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+body, html, .App, #root, .auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all .3s;
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #eedf09;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #0910e6;
+}
