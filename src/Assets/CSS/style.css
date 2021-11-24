@@ -52,6 +52,7 @@
 #main-component {
     padding: 0;
     background-size: contain;
+    /* background-color: grey; */
 }
 
 .bg-sign {
@@ -342,3 +343,343 @@
 
 
 /* end for landing */
+
+/* start dash */
+.bg-dash {
+    padding-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.wrap-box-dash {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.wrap-dash {
+    background-color: #ffffff;
+    border-radius: 23px;
+    border: 1px solid #707070;
+}
+
+.wrap-box2-head {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    height: 80px;
+}
+
+.list-rumah {
+    padding: 10px 20px;
+}
+
+.wrap-list-rumah {
+    border: 1px solid #ffbc00;
+    line-height: 10px;
+    padding-bottom: 10px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #ffff 75%, #ffbc00);
+}
+
+.img-rumah {
+    height: 140px;
+    border-radius: 10px;
+}
+
+.title-home h5 {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.title-dev {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 5px;
+}
+
+.btn-next:disabled {
+    background-color: grey;
+    border: none;
+    cursor: not-allowed;
+    width: 170px;
+    padding: 10px 5px;
+}
+
+.btn-next {
+    background-color: #ffbc00;
+    border: none;
+    cursor: pointer;
+    width: 170px;
+    padding: 10px 5px;
+}
+
+.centang {
+    position: absolute;
+    color: green;
+    padding-left: 15%;
+}
+
+.wrap-step {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.lingkaran{
+	width: 75px;
+	height: 75px;
+	background: #ffbc00;
+	border-radius: 100%;
+    border: 1px solid #ffbc00;
+    margin-left: -5px;
+}
+
+.lingkaran-grey{
+	width: 75px;
+	height: 75px;
+	background: grey;
+	border-radius: 100%;
+    border: 1px solid grey;
+    margin-left: -5px;
+}
+
+.persegipanjang {
+    width: 150px;
+    height: 20px;
+    background: #ffbc00;
+    margin-top: 30px;
+    margin-left: -5px;
+}
+
+.persegipanjang-grey {
+    width: 150px;
+    height: 20px;
+    background: grey;
+    margin-top: 30px;
+    margin-left: -5px;
+}
+
+.text-step {
+    text-align: center;
+    font-size: 50px;
+}
+
+.text-step-grey {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+.wrap-formuploadkpr {
+    padding-top: 40px ;
+    padding-bottom: 40px;
+    padding-left: 5%;
+}
+
+#bg-dashburd {
+    background-color: #f9f7f5;
+}
+
+.wrapper-dashburd {
+    padding-top: 3%;
+    padding-right: 4%;
+    padding-bottom: 3%;
+    padding-left: 8%;
+    height: auto;
+}
+
+.wrapper-side-left {
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    border-radius: 20px;
+    width: 20%;
+}
+
+.wrapper-side-right1 {
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    border-radius: 30px;
+    /* height: 700px; */
+    background-image: linear-gradient(to top, #ffff 75%, #ffbc00);
+}
+
+.title-dashburd {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+
+.wrapper-side-right {
+    padding-left: 40px;
+}
+
+.wrapper-side-right2 {
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    border-radius: 30px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.wrapper-side-left-menu {
+    padding-left: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.wrap-ico {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.ico {
+    height: 35px;
+    width: 35px;
+}
+
+.wrap-ico{
+    margin-bottom: 20px;
+}
+
+.wrap-ajukan {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.outer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fcb900;
+    margin: 10px;
+  }
+
+.outer-grey {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    background-color: gray;
+    margin: 10px;
+}
+
+.inner {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 15%;
+    left: 30%;
+}
+
+.step-angka {
+    /* font-family: 'Nunito Sans', sans-serif; */
+    font-weight: bold;
+    padding-left: 13px;
+    color: #fcb900;
+}
+
+.step-angka-grey {
+    /* font-family: 'Nunito Sans', sans-serif; */
+    font-weight: bold;
+    padding-left: 13px;
+    color: grey;
+}
+
+.step-angka h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.segipanjang {
+    width: 90px;
+    height: 15px;
+    background: #46443f;
+    margin-top: 40px;
+    margin-left: -15px;
+    margin-right: -20px;
+}
+
+.segipanjang-grey {
+    width: 90px;
+    height: 15px;
+    background: grey;
+    margin-top: 40px;
+    margin-left: -15px;
+    margin-right: -20px;
+}
+
+.wrap-button-next {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    padding-top: 2%;
+}
+
+::-webkit-file-upload-button {
+    background: #fcb900;
+    color: black;
+    padding: 8px 25px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.15s ease;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    line-height: 1.5;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.btn-upload {
+    background-color: #fcb900; /* Green */
+    border: none;
+    color: #5b574d;
+    padding: 6px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;}
+
+.btn-upload:disabled {
+    background-color: grey; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: not-allowed;
+}
+
+.foto-pegang {
+    padding-top: 30px;
+}
+/* end dash */
