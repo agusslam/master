@@ -1,0 +1,58 @@
+.title-hubungi {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.wrapper-alamat{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.text-alamat p {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 10px;
+
+}
+
+.img-hubungikami2 {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 100%;    
+}
+
+.img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.img-wrap .img-hubungikami {
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;    
+}
+
+.wrap-text {
+    padding-bottom: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.wrap-text-contact {
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: justify;
+}
+
+.wrap-text-contact2 {
+    padding-left: 22%;
+    padding-right: 20%;
+    text-align: justify;
+}

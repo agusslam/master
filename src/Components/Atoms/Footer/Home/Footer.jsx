@@ -11,7 +11,7 @@ import {  faFacebook, faTwitter, faYoutube, faInstagram } from '@fortawesome/fre
 class Foot extends React.Component {
     render(){
         return(
-            <Container fluid={true} className="p-0">
+            <Container fluid={true}>
                 <Row className="footer">
                     <Col md="4">
                         <p>SIMULASI KPR</p>

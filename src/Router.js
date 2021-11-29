@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Homepage from './Components/Home/Home'
 import SignIn from './Components/Signin/Signin'
+import ConTact from './Components/Contact/Contact'
+
 import DashUser from './Components/DashboardUser/Dashboard'
 import DashUserAjukanKpr from './Components/DashboardUser/PilihRumah'
 import DashUserUploadForm from './Components/DashboardUser/FormKPR'
@@ -33,6 +35,7 @@ class Routes extends React.Component {
                             <Route exact path="/simulasi" component={DashboardSimul} ></Route>
                             <Route exact path="/dashboardadmin" component={DashAdmin} ></Route>
                             <Route exact path="/adminlist/detail/:id" component={DashAdminDet} ></Route>
+                            <Route exact path="/contact" component={ConTact} ></Route>
                         </Fragment>
                     </Switch>
                 </Router>
