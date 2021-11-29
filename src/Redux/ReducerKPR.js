@@ -7,7 +7,10 @@ let initialState = {
     slik: '',
     legal: '',
     komite: '',
-    setuju: ''
+    setuju: '',
+    angsuran120: '',
+    angsuran60:'',
+    angsuran180:''
 }
 const ReducerKPR = (state = initialState, action) => {
     switch (action.type) {
@@ -60,6 +63,21 @@ const ReducerKPR = (state = initialState, action) => {
         return {
             ...state,
             setuju: action.value
+        } 
+        case 'CHANGE_ANGSURAN120':
+        return {
+            ...state,
+            angsuran120: action.value
+        }  
+        case 'CHANGE_ANGSURAN60':
+        return {
+            ...state,
+            angsuran60: action.value
+        } 
+        case 'CHANGE_ANGSURAN180':
+        return {
+            ...state,
+            angsuran180: action.value
         }               
         default:
             return state

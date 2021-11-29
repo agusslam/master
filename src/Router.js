@@ -8,6 +8,7 @@ import DashUserAjukanKpr from './Components/DashboardUser/PilihRumah'
 import DashUserUploadForm from './Components/DashboardUser/FormKPR'
 import DashIdentitas from './Components/DashboardUser/FormIdentitas'
 import DashUserUploadSlip from './Components/DashboardUser/FormSlip'
+import DashboardSimul from './Components/DashboardUser/SimulasiKPR'
 
 import DashAdmin from './Components/DashboardAdmin/Dashboard'
 import DashAdminDet from './Components/DashboardAdmin/DetailList'
@@ -29,6 +30,7 @@ class Routes extends React.Component {
                             <Route exact path="/ajukankpr/formkpr" component={DashUserUploadForm} ></Route>
                             <Route exact path="/ajukankpr/formidentitas" component={DashIdentitas}></Route>
                             <Route exact path="/ajukankpr/formslip" component={DashUserUploadSlip}></Route>
+                            <Route exact path="/simulasi" component={DashboardSimul} ></Route>
                             <Route exact path="/dashboardadmin" component={DashAdmin} ></Route>
                             <Route exact path="/adminlist/detail/:id" component={DashAdminDet} ></Route>
                         </Fragment>

@@ -17,7 +17,7 @@ class SideMenu extends React.Component {
                         <Nav.Link className="nav-style-user" href="/dashboardmember" active={this.props.location.pathname.startsWith('/dashboardmember')}><img className="ico" src={icoDashboard} alt="dashboard" />Dashboard</Nav.Link>
                     </Col>
                     <Col md="12" className="wrap-ico">
-                    <Nav.Link className="nav-style-user" href="/simulasikpr" active={this.props.location.pathname.startsWith('/simulasikpr')}><img className="ico" src={icoSimulasi} alt="simulasi" />Simulasi KPR</Nav.Link>
+                    <Nav.Link className="nav-style-user" href="/simulasi" active={this.props.location.pathname.startsWith('/simulasi')}><img className="ico" src={icoSimulasi} alt="simulasi" />Simulasi KPR</Nav.Link>
                     </Col>
                     <Col md="12" className="wrap-ico">
                         <Nav.Link className="nav-style-user" href="/ajukankpr" active={this.props.location.pathname.startsWith('/ajukankpr')}><img className="ico" src={icoAjukan} alt="ajukan" />Ajukan KPR</Nav.Link>
