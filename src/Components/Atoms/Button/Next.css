@@ -1,0 +1,24 @@
+.btn-next:disabled {
+    background-color: grey !important;
+    border: none !important;
+    cursor: not-allowed !important;
+    width: 170px;
+    padding: 10px 5px;
+}
+
+.btn-next {
+    background-color: #ffbc00 !important;
+    border: none !important;
+    cursor: pointer !important;
+    width: 170px;
+    padding: 10px 5px;
+}
+
+.btn-next:hover {
+    background-color: #d7a007 !important;
+    border: none !important;
+    cursor: pointer !important;
+    width: 170px;
+    /* padding: 10px 5px !important; */
+}
+

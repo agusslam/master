@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:wght@400;700;800&family=Roboto&display=swap');
+
+.footer {
+    background-color: #ffcc00;
+    padding-top: 40px;
+    padding-left: 5%;
+    padding-left: 5%;
+    padding-bottom: 40px;
+}
+
+.footer p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000000 !important;
+    margin-left: 10px;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.footer .logoBlack {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.footer .wrap-connect{
+    padding-top: 40px;
+}
+
+.style-connect {
+    padding-top: 10px;
+    text-align: right;
+    color: black;
+}
+
+.style-iconbrand {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+}
+
+.footer-dark {
+    height: 100px;
+    background-color: #545045;
+    color: #ffbc00;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
