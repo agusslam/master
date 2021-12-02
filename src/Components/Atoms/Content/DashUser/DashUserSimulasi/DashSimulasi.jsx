@@ -3,12 +3,8 @@ import React from 'react'
 import { Container, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap'
 import '../DashUserSimulasi/DashSimulasi.css'
 import { Route } from 'react-router-dom'
-import Cookies from 'universal-cookie'
 
 import { connect } from 'react-redux'
-
-import Spin from '../../../Spinner/index'
-import ButtonNext from '../../../Button/Next'
 
 import Sidemenu from '../../../Sidemenu/index'
 
@@ -35,7 +31,7 @@ class UserSimulasi extends React.Component {
     }
 
     ClickHitung = (e) => {
-        const {harga, rate, uangmuka} = this.setState
+        // const {harga, rate, uangmuka} = this.setState
         let hargaNew = Math.floor(this.state.harga)
         let rateNew = Math.floor(this.state.rate)
         let uangmukaNew = Math.floor(this.state.uangmuka)
@@ -118,21 +114,24 @@ class UserSimulasi extends React.Component {
                                         </InputGroup>
                                     </Col>
                                     <Col md="12" className="wrap-button-hitung">
-                                        <Button className="btn-hitung" onClick={this.ClickHitung} >Hitung</Button>
+                                        <Button className="btn-hitung" onClick={this.ClickHitung} >Menghitung</Button>
                                     </Col>
                                 </Row>
                             </Col>
                             <Col md="12" className="wrapper-side-right2">
                                 <Row className="wrap-kalkulator">
                                     <Col md="12"><h5>Hasil Perhitungan</h5></Col>
-                                    <Col md="5" className="text-left-kal"><p>Uang Muka</p></Col>
-                                    <Col md="7" className="input-width"><p>Rp {this.state.uangmuka ? parseFloat(this.state.uangmuka).toLocaleString() : 0 },00</p></Col>
-                                    <Col md="5" className="text-left-kal"><p>Angsuran (Tenor 5 Tahun)</p></Col>
-                                    <Col md="7" className="input-width"><p>Rp {this.props.angs60 ? parseFloat(Math.ceil(this.props.angs60)).toLocaleString() : 0 },00</p></Col>
-                                    <Col md="5" className="text-left-kal"><p>Angsuran (Tenor 10 Tahun)</p></Col>
-                                    <Col md="7" className="input-width"><p>Rp {this.props.angs120 ? parseFloat(Math.ceil(this.props.angs120)).toLocaleString() : 0 },00</p></Col>
-                                    <Col md="5" className="text-left-kal"><p>Angsuran (Tenor 15 Tahun)</p></Col>
-                                    <Col md="7" className="input-width"><p>Rp {this.props.angs180 ? parseFloat(Math.ceil(this.props.angs180)).toLocaleString() : 0 },00</p></Col>
+                                    {/* <Col md="5" className="text-left-kal"><p>Uang Muka</p></Col>
+                                    <Col md="7" className="input-width"><p>Rp {this.state.uangmuka ? parseFloat(this.state.uangmuka).toLocaleString() : 0 },00</p></Col> */}
+                                    <Col md="5" className="text-left-kal"><p>Tenor 5 Tahun</p></Col>
+                                    <Col md="6" className="input-width"><p>Rp {this.props.angs60 ? parseFloat(Math.ceil(this.props.angs60)).toLocaleString() : 0 },00</p></Col>
+                                    <Col md="1"><p>/bulan</p></Col>
+                                    <Col md="5" className="text-left-kal"><p>Tenor 10 Tahun</p></Col>
+                                    <Col md="6" className="input-width"><p>Rp {this.props.angs120 ? parseFloat(Math.ceil(this.props.angs120)).toLocaleString() : 0 },00</p></Col>
+                                    <Col md="1"><p>/bulan</p></Col>
+                                    <Col md="5" className="text-left-kal"><p>Tenor 15 Tahun</p></Col>
+                                    <Col md="6" className="input-width"><p>Rp {this.props.angs180 ? parseFloat(Math.ceil(this.props.angs180)).toLocaleString() : 0 },00</p></Col>
+                                    <Col md="1"><p>/bulan</p></Col>
                                 </Row>
                             </Col>
                         </Row>

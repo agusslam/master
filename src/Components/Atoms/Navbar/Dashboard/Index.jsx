@@ -1,10 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import Cookies from 'universal-cookie'
 import { connect } from 'react-redux'
 import { logout } from '../../../../Actions/auth'
-
-// const cookies = new Cookies()
 import '../Dashboard/Index.css'
 import logo from '../../../../Assets/Images/logo-kbnobg.png'
 import thumbnail from '../../../../Assets/Images/thumnail.png'

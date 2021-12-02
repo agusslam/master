@@ -3,15 +3,20 @@ import React from 'react'
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../Contact/ContactContent.css'
-import ImageBanner from '../../../../Assets/Images/hubungi_kami.png'
+// import ImageBanner from '../../../../Assets/Images/hubungi_kami.png'
 import ImageBanner2 from '../../../../Assets/Images/BG_KPR_2.png'
 import ImageBanner3 from '../../../../Assets/Images/bgdashboard.png'
 
-
 const mapStyles = {
-    width: '29%',
-    height: '32%',
+    width: '100%',
+    height: '100%',
 }
+
+const containerStyle = {
+    position: 'relative',  
+    width: '100%',
+    height: '95%'
+  }
 
 class ContactC extends React.Component {
     render() {
@@ -31,22 +36,22 @@ class ContactC extends React.Component {
                                 <p>Telex. 62487, 66087</p>
                                 <p>SWIFT : BBUKIDJA </p>
                             </Col>
-                            <Col md="6">
-                                <Map
-                                    google={this.props.google}
-                                    zoom={18}
-                                    style={mapStyles}
-                                    initialCenter={{ lat: -6.243932, lng: 106.850081 }}
-                                >
-                                    <Marker position={{ lat: -6.243932, lng: 106.8500812 }} />
-                                </Map>
-                                )
+                            <Col md="6" className="map-style">
+                                    <Map
+                                        google={this.props.google}
+                                        zoom={18}
+                                        style={mapStyles}
+                                        containerStyle={containerStyle}
+                                        initialCenter={{lat: -6.243932, lng: 106.8500812}}
+                                    >
+                                        <Marker position={{ lat: -6.243932, lng: 106.8500812 }} />
+                                    </Map>
                             </Col>
                         </Row>
                     </Col>
-                    <Col md="12" className="img-wrap">
+                    {/* <Col md="12" className="img-wrap">
                         <div className="img-hubungikami" style={{ backgroundImage: `url(${ImageBanner})` }}></div>
-                    </Col>
+                    </Col> */}
                     <Col md="12" className="wrap-text" style={{ backgroundImage: `url(${ImageBanner3})` }}>
                         <p className="wrap-text-contact">
                             Jika anda mempunyai pertanyaan mengenai produk dan layanan Bank Bukopin atau ingin

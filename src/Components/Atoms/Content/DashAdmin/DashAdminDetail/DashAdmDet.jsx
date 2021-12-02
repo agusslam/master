@@ -11,8 +11,6 @@ import Spin from '../../../Spinner/index'
 
 import { getDataDebt, FlagStatus } from '../../../../../Actions/admin'
 
-const chk = true
-
 class DashborAdminDeta extends React.Component {
     state = {
         idkpr: '',        
@@ -35,13 +33,13 @@ class DashborAdminDeta extends React.Component {
     }
 
     componentDidMount() {
-        const resAPI = this.props.getDataDebitur(this.state.idkpr).catch(err => err)
-        console.log(this.props.isState)
+        this.props.getDataDebitur(this.state.idkpr).catch(err => err)
+        // console.log(this.props.isState)
     }
 
-    componentDidUpdate() {
-        console.log(this.props.isState)
-    }
+    // componentDidUpdate() {
+    //     console.log(this.props.isState)
+    // }
 
     handleCheckPengajuan = (e) => {
         this.props.ubahPengajuan(e.target.checked)
@@ -90,7 +88,10 @@ class DashborAdminDeta extends React.Component {
             setuju: this.props.stepSetuju
         }
         const resUpdate = await this.props.updateFlag(data).catch(err => err)
-        if (resUpdate.status === 200) { alert("sukses") } else { alert("No" + resUpdate.message) }
+        if (resUpdate.status === 200) { alert("sukses") } else { 
+            // alert("No " + resUpdate.message) 
+            console.log(resUpdate)
+        }
         console.log(data)
     }
 

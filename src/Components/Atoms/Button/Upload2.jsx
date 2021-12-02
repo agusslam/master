@@ -4,11 +4,11 @@ import '../Button/Upload.css'
 
 const buttonupload2 = ({ title, onClick, aktif }) => {
     if(aktif === 0){
-        return <Button className="btn-upload" onClick={onClick}>Upload</Button>
+        return <Button className="btn-upload" onClick={onClick}>Unggah</Button>
     }else if(aktif === 1){
-        return <Button className="btn-upload disabled" type="submit">Upload</Button>
+        return <Button className="btn-upload disabled" type="submit">Unggah</Button>
     }else {
-        return <Button className="btn-upload disabled" type="submit">Success Upload</Button>
+        return <Button className="btn-upload disabled" type="submit">Sukses Unggah</Button>
     }
     
 }

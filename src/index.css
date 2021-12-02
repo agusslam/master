@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a.activeX {
+  font-size: 18px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #851616 !important;
+  margin-left: 10px;
+  font-weight: bold;
+  text-decoration-line: underline !important;
+  text-underline-offset: 5px !important;
+}

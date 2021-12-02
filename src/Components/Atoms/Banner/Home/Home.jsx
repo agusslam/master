@@ -7,9 +7,9 @@ import ImageBanner from '../../../../Assets/Images/bannernew.png'
 class Bannerhome extends React.Component {
     render() {
         return (
-            <Container fluid={true} className="p-0">
+            <Container fluid={true}>
                 <Row>
-                    <Col md="12" className="banner-style">
+                    <Col md="12" className="p-0">
                         <div className="image-stylehome" style={{
                             backgroundImage: `linear-gradient(to right, #545045 , rgba(96, 96, 96, 0)),url(${ImageBanner})`
                         }} >

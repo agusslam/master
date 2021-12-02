@@ -14,8 +14,8 @@ class Bannerhome extends React.Component {
                         }}>
                         <div className="box-text-banner">
                             <div>
-                                <h1 className="text-banner">Fullfill Your Dream</h1>
-                                <h1 className="text-banner">House With KB Bukopin</h1>
+                                <h1 className="text-banner">Apapun Masalahnya</h1>
+                                <h1 className="text-banner">Halo KB Bukopin Jawabannya</h1>
                             </div>
                         </div>
                     </Col>

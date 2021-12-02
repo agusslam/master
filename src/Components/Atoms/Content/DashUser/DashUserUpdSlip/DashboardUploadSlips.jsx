@@ -178,10 +178,10 @@ class UserUpldSlip extends React.Component {
                                     <Col md="12">
                                         <Row className="wrap-formuploadkpr">
                                             <Col md="12">
-                                                <p>Silahkan upload Rekening koran 3 bulan terakhir dan slip gaji</p>
+                                                <p>Silahkan unggah Rekening koran 3 bulan terakhir dan slip gaji</p>
                                             </Col>
                                             <Col md="12">
-                                                <p>1. Upload scan rekening koran</p>
+                                                <p>1. Unggah scan rekening koran</p>
                                             </Col>
                                             <Col md="6">
                                                 <form>
@@ -198,7 +198,7 @@ class UserUpldSlip extends React.Component {
                                                 {<Spin loading={this.props.isLoading} />}
                                             </Col>
                                             <Col md="12" className="foto-pegang">
-                                                <p>2. Upload scan slip gaji 3 bulan terakhir</p>
+                                                <p>2. Unggah scan slip gaji 3 bulan terakhir</p>
                                             </Col>
                                             <Col md="6">
                                                 <form>
@@ -216,7 +216,7 @@ class UserUpldSlip extends React.Component {
                                         </Row>
                                     </Col>
                                     <Col className="wrap-button-next">
-                                        {<Button className="btn-next" title={'Finish'} loading={this.props.isLoading} isNext={this.props.isFill4} onClick={this.handleNext} />}
+                                        {<Button className="btn-next" title={'Kirim'} loading={this.props.isLoading} isNext={this.props.isFill4} onClick={this.handleNext} />}
                                     </Col>
 
                                 </Row>

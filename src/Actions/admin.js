@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie'
 const cookies = new Cookies()
 const token = cookies.get('_tKJKASKHDS')
 
+// const API_URL = 'http://localhost:8008'
 const API_URL = 'https://apiauthv1.herokuapp.com'
 const Header = { headers: { Authorization: `Bearer ${token}` } }
 
@@ -23,6 +24,7 @@ export const FlagStatus = (data) => async (dispatch) => {
         dispatch({ type: 'CHANGE_LOADING', value: false })
         return Promise.resolve(res.data)
     } catch (error) {
+        dispatch({ type: 'CHANGE_LOADING', value: false })
         return Promise.reject(error)
     }
 } 

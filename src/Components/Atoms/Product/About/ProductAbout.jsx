@@ -11,7 +11,7 @@ import bg_tentukan from '../../../../Assets/Images/BG_TENTUKAN.png'
 class ProductHome extends React.Component {
     render() {
         return (
-            <Container fluid={true} className="p-0 adjust-height" style={{
+            <Container fluid={true} className="adjust-height" style={{
                 backgroundImage: `url(${bg_tentukan})`, backgroundSize: 'cover' 
                 }}>
                 <Row className="product-style2">                 
@@ -28,7 +28,7 @@ class ProductHome extends React.Component {
                             <Col md="12" className="title-class2 text-center">
                                 <h6 style={{ fontWeight: 'bold' }}>SIMULASI KPR</h6>
                                 <p>Ragu tidak bisa beli rumah?, bisa coba simulasi disini</p>
-                                <a href="#" className="view-detail">View Detail</a>
+                                <a href="/simulasi" className="view-detail">Coba Simulasi</a>
                             </Col>
                         </Row>
                     </Col>
@@ -40,7 +40,7 @@ class ProductHome extends React.Component {
                             <Col md="12" className="title-class2 text-center">
                                 <h6 style={{ fontWeight: 'bold' }}>CARI RUMAH</h6>
                                 <p>Jaringan kerjasama yang luas dengan developer</p>
-                                <a href="#" className="view-detail">View Detail</a>
+                                <a href="/simulasi" className="view-detail">Cari Sekarang</a>
                             </Col>
                         </Row>
                     </Col>
@@ -52,7 +52,7 @@ class ProductHome extends React.Component {
                             <Col md="12" className="title-class2 text-center">
                                 <h6 style={{ fontWeight: 'bold' }}>AJUKAN KPR</h6>
                                 <p>Segera wujudkan rumah impian dengan ajukan KPR</p>
-                                <a href="#" className="view-detail">View Detail</a>
+                                <a href="/signin" className="view-detail">Beli Rumah</a>
                             </Col>
                         </Row>
                     </Col>

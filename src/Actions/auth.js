@@ -7,6 +7,7 @@ const cookies = new Cookies()
 const token = cookies.get('_tKJKASKHDS')
 
 const API_URL = 'https://apiauthv1.herokuapp.com'
+// const API_URL = 'http://localhost:8008'
 const Header = { headers: { Authorization: `Bearer ${token}` } }
 
 export const loginUserAPI = (data) => async (dispatch) => {
@@ -63,30 +64,6 @@ export const getDebtInfo = () => async (dispatch) => {
     return Promise.reject(error)
   }
 }
-
-// export const loginUserAPI = (data) => (dispatch) => {
-//   return new Promise((resolve, reject) => {
-//     dispatch({ type: 'CHANGE_LOADING', value: true })
-//     Axios.post(API_URL + '/user/auth', {
-//       username: data.username,
-//       password: data.password
-//     })
-//       .then(function (response) {
-//         // console.log(response);        
-//         dispatch({ type: 'CHANGE_LOADING', value: false })
-//         dispatch({ type: 'CHANGE_LOGIN', value: true })
-//         // dispatch({ type: 'CHANGE_USER', value: dataUser })
-//         cookies.set('_tKJKASKHDS', response.data.token)
-//         resolve(true)
-//       })
-//       .catch(function (error) {
-//         console.log(error);
-//         dispatch({ type: 'CHANGE_LOADING', value: false })
-//         dispatch({ type: 'CHANGE_LOGIN', value: false })
-//         reject(false)
-//       })
-//   })
-// }
 
 export const logout = () => (dispatch) => {
   cookies.remove("_tKJKASKHDS", { path: '/' })  

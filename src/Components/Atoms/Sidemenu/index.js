@@ -23,13 +23,13 @@ class SideMenu extends React.Component {
                         <Nav.Link className="nav-style-user" href="/ajukankpr" active={this.props.location.pathname.startsWith('/ajukankpr')}><img className="ico" src={icoAjukan} alt="ajukan" />Ajukan KPR</Nav.Link>
                     </Col>
                     <Col md="12" className="wrap-ico">
-                        <Nav.Link className="nav-style-user" href="/bukopin" active={this.props.location.pathname.startsWith('/bukopin')}><img className="ico" src={icoOur} alt="our website" />Our Website</Nav.Link>
+                        <Nav.Link className="nav-style-user" href="/bukopin" active={this.props.location.pathname.startsWith('/bukopin')}><img className="ico" src={icoOur} alt="our website" />Situs Web</Nav.Link>
                     </Col>
                     <Col md="12" className="wrap-ico">
-                        <Nav.Link className="nav-style-user" href="/aboutus" active={this.props.location.pathname.startsWith('/aboutus')}><img className="ico" src={icoAbout} alt="about us" />About Us</Nav.Link>
+                        <Nav.Link className="nav-style-user" href="/tentang" active={this.props.location.pathname.startsWith('/tentang')}><img className="ico" src={icoAbout} alt="about us" />Tentang Kami</Nav.Link>
                     </Col>
                     <Col md="12" className="wrap-ico">
-                        <Nav.Link className="nav-style-user" href="/contact" active={this.props.location.pathname.startsWith('/contact')}><img className="ico" src={icoContact} alt="login-pro" />Contact</Nav.Link>
+                        <Nav.Link className="nav-style-user" href="/contact" active={this.props.location.pathname.startsWith('/contact')}><img className="ico" src={icoContact} alt="login-pro" />Kontak</Nav.Link>
                     </Col>
                 </Row>
             </Col>

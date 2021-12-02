@@ -3,9 +3,9 @@
 .footer {
     background-color: #ffcc00;
     padding-top: 40px;
-    padding-left: 5%;
-    padding-left: 5%;
+    padding-left: 8%;
     padding-bottom: 40px;
+    padding-right: 8%;
 }
 
 .footer p {
@@ -16,10 +16,23 @@
     line-height: 10px;
 }
 
-.footer .logoBlack {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.footer .logoBukopin .wrap-imagelogo{
+    display: flex;
+    align-items: flex-end;
+    justify-content:flex-end;
+}
 
+.footer .logoBukopin .wrap-imagehalo{
+    display: flex;
+    align-items: flex-end;
+    justify-content:flex-end;
+}
+
+.footer .logoBukopin .logoBlack {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    height: 60px;
+    width: 180px;
 }
 
 .footer .wrap-connect{
@@ -39,7 +52,7 @@
 }
 
 .footer-dark {
-    height: 100px;
+    padding-top: 20px;
     background-color: #545045;
     color: #ffbc00;
     display: flex;
@@ -48,4 +61,20 @@
     font-size: 25px;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: bold;
+}
+
+.footer .logoBukopin .img-foot {
+    width: 300px;
+}
+
+.link-footer {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.link-footer:hover {
+    text-decoration: none;
+    color: #a97e08;
+    font-family: 'Nunito Sans', sans-serif;
 }

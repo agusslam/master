@@ -1,0 +1,141 @@
+.block-house {
+    padding-right: 20px;
+}
+
+.block-house .wrap-list-rumah-paging {
+    line-height: 10px;
+    padding-bottom: 5px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #f7e7bc 75%, #ffbc00);
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
+.block-house .wrap-list-rumah-paging .img-rumah-paging {
+    height: 140px;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+
+.title-home-paging h6 {
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.harga-list-paging {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 0;
+}
+
+.title-dev-paging {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 5px;
+    line-height: 0;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .wrap-button-next {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    padding-top: 2%;
+}
+
+.centang {
+    position: absolute;
+    color: green;
+    padding-left: 15%;
+}
+
+.block-house {
+    cursor: pointer;
+}
+
+.block-house:hover {
+    cursor: pointer;
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.align-paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}

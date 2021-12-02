@@ -114,7 +114,7 @@ class UserAjukan2 extends React.Component {
                             <Col md="12" className="wrapper-side-right1">
                                 <Row className="wrap-ajukan">
                                     <Col md="12"><h5>Form Pengajuan KPR</h5></Col>
-                                    <Col md="12"><h5>Search</h5></Col>
+                                    {/* <Col md="12"><h5>Search</h5></Col> */}
                                     <Lingkaran md="2" className="outer" aktif={this.props.circleS1}>
                                         <Row className="inner">
                                             <Col md="12" className="step-angka"><h1>1</h1></Col>
@@ -141,10 +141,10 @@ class UserAjukan2 extends React.Component {
                                     <Col md="12">
                                         <Row className="wrap-formuploadkpr">
                                             <Col md="12">
-                                                <p>Silahkan upload scan KTP dan Foto Selfie dengan memegang KTP</p>
+                                                <p>Silahkan unggah scan KTP dan Foto Selfie dengan memegang KTP</p>
                                             </Col>
                                             <Col md="12">
-                                                <p>1. Upload Foto Scan KTP</p>
+                                                <p>1. Unggah Foto Scan KTP</p>
                                             </Col>
                                             <Col md="6">
                                                 <form>
@@ -161,7 +161,7 @@ class UserAjukan2 extends React.Component {
                                                 {<Spin loading={this.props.isLoading} />}
                                             </Col>
                                             <Col md="12" className="foto-pegang">
-                                                <p>2. Upload Foto diri dengan memegang KTP</p>
+                                                <p>2. Unggah Foto diri dengan memegang KTP</p>
                                             </Col>
                                             <Col md="6">
                                                 <form>
@@ -179,7 +179,7 @@ class UserAjukan2 extends React.Component {
                                         </Row>
                                     </Col>
                                     <Col className="wrap-button-next">
-                                        {<Button className="btn-next" title={'Next'} isNext={this.props.isFill3} onClick={this.handleNext} />}
+                                        {<Button className="btn-next" title={'Lanjut'} isNext={this.props.isFill3} onClick={this.handleNext} />}
                                     </Col>
 
                                 </Row>

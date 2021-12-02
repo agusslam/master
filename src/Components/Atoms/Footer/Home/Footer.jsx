@@ -14,10 +14,10 @@ class Foot extends React.Component {
             <Container fluid={true}>
                 <Row className="footer">
                     <Col md="4">
-                        <p>SIMULASI KPR</p>
-                        <p>ABOUT US</p>
-                        <p>CONTACT</p>
-                        <img className="logoBlack" src={logoBlack} alt="LogoBlack" />
+                        <p></p>
+                        <p><a href="/simulasi" className="link-footer">Simulasi KPR</a></p>
+                        <p><a href="/about" className="link-footer">About Us</a></p>
+                        <p><a href="/contact" className="link-footer">Contact</a></p>                        
                     </Col>
                     <Col md="4">
                         <p>KANTOR PUSAT</p>
@@ -34,12 +34,15 @@ class Foot extends React.Component {
                         </Row>
                     </Col>
                     <Col md="4" className="logoBukopin">
-                    <img src={HaloBukopin} alt="Halo Bukopin" />
+                        <Row>
+                            <Col md="12" className="wrap-imagelogo"><img className="logoBlack" src={logoBlack} alt="LogoBlack" /></Col>
+                            <Col md="12" className="wrap-imagehalo"><img className="img-foot" src={HaloBukopin} alt="Halo Bukopin" /></Col>
+                        </Row>                    
                     </Col>
                 </Row>
                 <Row className="footer-dark">
                     <Col md="12">
-                        <p>BANK KB BUKOPIN &copy; 2021 All rights reserved.</p>
+                        <p>Copyright &copy; BANK KB BUKOPIN 2021 All rights reserved.</p>
                     </Col>
                 </Row>
             </Container>

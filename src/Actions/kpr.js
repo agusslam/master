@@ -5,13 +5,14 @@ const cookies = new Cookies()
 const token = cookies.get('_tKJKASKHDS')
 
 const API_URL = 'https://apiauthv1.herokuapp.com'
+// const API_URL = 'http://localhost:8008'
 const Header = { headers: { Authorization: `Bearer ${token}` } }
 
 export const getRumah = () => async (dispatch) => {
     try {
         dispatch({ type: 'CHANGE_LOADING', value: true })
         const res = await Axios.get(API_URL + '/house')
-        console.log(res)
+        // console.log(res)
         dispatch({ type: 'CHANGE_LOADING', value: false })
         dispatch({ type: 'GET_RUMAH', value: res.data })
         return Promise.resolve(res.data)
@@ -101,7 +102,7 @@ export const getInfo = () => async (dispatch) => {
     try {
         dispatch({ type: 'CHANGE_LOADING', value: true })
         const res = await Axios.get(API_URL + '/info', Header)
-        // console.log(res)
+        // console.log(res.data)
         dispatch({ type: 'CHANGE_LOADING', value: false })
         dispatch({ type: 'GET_DEBITUR', value: res.data })
         return Promise.resolve(res.data)

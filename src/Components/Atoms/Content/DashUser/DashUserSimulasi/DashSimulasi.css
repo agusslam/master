@@ -44,7 +44,11 @@
 }
 
 .wrapper-dashburd .wrapper-side-right .wrapper-side-right2 .wrap-kalkulator .input-width {
-    width: 250px;
+    width: 200px;
+    border: 1px solid grey;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    height: 30px;
 }
 
 .btn-hitung {

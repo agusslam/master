@@ -17,7 +17,7 @@
 
 .wrapper-dashburd2 .wrapper-side-left .wrapper-side-left-menu .wrap-ico {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;

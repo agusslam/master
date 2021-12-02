@@ -49,7 +49,7 @@ class Admindashboard extends React.Component {
                             <Col md="12" className="wrapper-side-right12">
                                 <Row className="wrap-ajukan2">
                                     <Col md="12"><h5>List Debitur yang mengajukan KPR</h5></Col>
-                                    <Col md="12"><h5>Search</h5></Col>
+                                    {/* <Col md="12"><h5>Search</h5></Col> */}
                                     {<Spin loading={this.props.isLoading} />}
                                     <Col md="12" className="style-over">
                                         <Table striped bordered hover>

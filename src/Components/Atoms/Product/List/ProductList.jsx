@@ -15,7 +15,7 @@ import BG from '../../../../Assets/Images/BG_KPR.png'
 class ProductHome extends React.Component {
     render() {
         return (
-            <Container fluid={true} className="p-0" style={{
+            <Container fluid={true} style={{
                 backgroundImage: `url(${BG})`, backgroundSize: 'cover' 
                 }}>
                 <Row className="product-style">

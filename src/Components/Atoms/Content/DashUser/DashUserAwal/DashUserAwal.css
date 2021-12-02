@@ -68,3 +68,16 @@
 }
 
 
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right2 .wrapper-wrap-sejarah {
+    font-family: 'Nunito Sans', sans-serif;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 30px;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right2 .wrapper-wrap-sejarah .wrap-content-sejarah {
+    padding-top: 10px;
+    line-height: 10px;
+}
+

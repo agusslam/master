@@ -7,7 +7,7 @@ import bg_info from '../../../../Assets/Images/BG_INFO.png'
 class HomeInf extends React.Component {
     render() {
         return (
-            <Container fluid={true} className="p-0" style={{
+            <Container fluid={true} style={{
                 backgroundImage: `url(${bg_info})`, backgroundSize: 'cover' 
                 }}>
                 <Row className="wrapper-homeinfo">

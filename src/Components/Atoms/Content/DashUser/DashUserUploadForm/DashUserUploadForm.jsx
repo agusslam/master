@@ -130,7 +130,7 @@ class UserAjukan1 extends React.Component {
                                                 <p>2. Isi dan tandatangai Form yang telah di download menggunakan materai Rp.10.000</p>
                                             </Col>
                                             <Col md="12">
-                                                <p>3. Scan dan upload form pengajuan yang telah diisi</p>
+                                                <p>3. Scan dan unggah form pengajuan yang telah diisi</p>
                                             </Col>
                                             <Col md="6">
                                                 <form>
@@ -149,7 +149,7 @@ class UserAjukan1 extends React.Component {
                                         </Row>
                                     </Col>
                                     <Col className="wrap-button-next">
-                                        {<Button className="btn-next" title={'Next'} isNext={this.props.isFill2} onClick={this.handleNext} />}
+                                        {<Button className="btn-next" title={'Lanjut'} isNext={this.props.isFill2} onClick={this.handleNext} />}
                                     </Col>
 
                                 </Row>
