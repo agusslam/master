@@ -1,6 +1,7 @@
 let initialState = {
     openDialog: false,
-    titleAlert: ''
+    titleAlert: '',
+    openProfil: false
 }
 
 const ModalReducer = (state = initialState, action) => {
@@ -9,6 +10,11 @@ const ModalReducer = (state = initialState, action) => {
             return {
                 ...state,
                 openDialog: action.value
+            }
+        case 'CHANGE_PROFIL':
+            return {
+                ...state,
+                openProfil: action.value
             }
         case 'CHANGE_TEXTDIALOG':
             return {

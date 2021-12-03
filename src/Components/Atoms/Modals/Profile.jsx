@@ -7,14 +7,14 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import thumbnail from '../../../Assets/Images/thumnail.png'
 import { getDebtInfo, logout } from '../../../Actions/auth'
 
-class modalAlert extends React.Component {
+class modalAlert2 extends React.Component {
     constructor(props) {
         super(props)
         // console.log(this.props)
     }
 
     handleClose = async () => {
-        this.props.setCloseDialog()
+        this.props.setCloseDialog2()
     }
 
     handleLogout = () => {
@@ -30,7 +30,7 @@ class modalAlert extends React.Component {
         return (
             <>
                 <Modal
-                    show={this.props.isOpenDialog}
+                    show={this.props.isOpenDialog2}
                     onHide={this.handleClose}
                     backdrop="static"
                     keyboard={false}
@@ -78,19 +78,19 @@ class modalAlert extends React.Component {
 }
 
 const mapsStateToProps = (state) => ({
-    isOpenDialog: state.modalReducer.openDialog,
+    isOpenDialog2: state.modalReducer.openProfil,
     infoProfile: state.rootReducer.infoDebi
 })
 
 const mapsDispatchToProps = (dispatch) => {
     return {
-        setCloseDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: false }),
+        setCloseDialog2: () => dispatch({ type: 'CHANGE_PROFIL', value: false }),
         infoUser: () => dispatch(getDebtInfo()),
         logoutAct: () => dispatch(logout())
     }
 }
 
-export default connect(mapsStateToProps, mapsDispatchToProps)(modalAlert)
+export default connect(mapsStateToProps, mapsDispatchToProps)(modalAlert2)
 
 
 

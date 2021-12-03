@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { logout } from '../../../../Actions/auth'
-import ModalDialog from '../../Modals/Profile'
+import ModalDialogProfile from '../../Modals/Profile'
 import '../Dashboard/Index.css'
 import logo from '../../../../Assets/Images/logo-kbnobg.png'
 import thumbnail from '../../../../Assets/Images/thumnail.png'
@@ -18,8 +18,8 @@ class NavbarDash extends React.Component {
     }
 
     showProfil = () => {
-        this.props.setDialog()
-        this.props.setTextDialog()
+        this.props.setDialog2()
+        // this.props.setTextDialog2()
     }
 
     componentDidMount() {
@@ -33,7 +33,7 @@ class NavbarDash extends React.Component {
     render() {
         return (
             <Navbar id="navbar">
-                <ModalDialog show={this.props.isOpenDialog} onHide={this.handleClose} title={this.props.titleD} />
+                <ModalDialogProfile show={this.props.isOpenDialog2} onHide={this.handleClose} title={this.props.titleD} />
                 <Nav className="logo-white"><img src={logo} alt="Logo" /></Nav>
                 <Nav className="menu">
                     <Nav className="wrapper-list-menu-white">
@@ -57,7 +57,7 @@ class NavbarDash extends React.Component {
 }
 
 const mapsStateToProps = (state) => ({
-    isOpenDialog: state.modalReducer.openDialog,
+    isOpenDialog2: state.modalReducer.openProfil,
     titleD: state.modalReducer.titleAlert,
     isLoading: state.rumahReducer.isLoading,
     userData: state.rootReducer.user,
@@ -67,8 +67,8 @@ const mapsStateToProps = (state) => ({
 
 const mapsDispatchToProps = (dispatch) => ({
     logoutAct: () => dispatch(logout()),
-    setDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: true }),
-    setTextDialog: (data) => dispatch({ type: 'CHANGE_TEXTDIALOG', value: data }),
+    setDialog2: () => dispatch({ type: 'CHANGE_PROFIL', value: true }),
+    // setTextDialog2: (data) => dispatch({ type: 'CHANGE_TEXTDIALOG', value: data }),
     setCloseDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: false })
 })
 
