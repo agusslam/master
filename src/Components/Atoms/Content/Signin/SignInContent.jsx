@@ -85,9 +85,9 @@ class SignIn extends React.Component {
                             <img className="img-logo-brand" src={logoFace} alt="login-pro" />
                             <img className="img-logo-brand" src={logoTweet} alt="login-pro" /> */}
                                 <Row>
-                                    <Col md="4" className="wrap-bg-logo"><img className="img-logo-brand" src={logoGoogle} alt="login-pro" /></Col>
-                                    <Col md="4" className="wrap-bg-logo"><img className="img-logo-brand" src={logoFace} alt="login-pro" /></Col>
-                                    <Col md="4" className="wrap-bg-logo"><img className="img-logo-brand" src={logoTweet} alt="login-pro" /></Col>
+                                    <Col md="4" className="wrap-bg-logo"><a href="https://account.google.com"><img className="img-logo-brand" src={logoGoogle} alt="login-pro" /></a></Col>
+                                    <Col md="4" className="wrap-bg-logo"><a href="https://www.facebook.com"><img className="img-logo-brand" src={logoFace} alt="login-pro" /></a></Col>
+                                    <Col md="4" className="wrap-bg-logo"><a href="https://twitter.com"><img className="img-logo-brand" src={logoTweet} alt="login-pro" /></a></Col>
                                 </Row>
                             </Col>
                         </Row>
@@ -111,7 +111,7 @@ class SignIn extends React.Component {
                                                 name="username"
                                                 onChange={this.handleChangeText}
                                                 id="username"
-                                                placeHolder="Masukkan username"
+                                                placeholder="Masukkan username"
                                             />
                                         </Form.Group>
                                         <Form.Group className="mb-3">
@@ -122,7 +122,7 @@ class SignIn extends React.Component {
                                                 name="password"
                                                 onChange={this.handleChangeText}
                                                 id="password"
-                                                placeHolder="Masukkan password "
+                                                placeholder="Masukkan password "
                                             />
                                         </Form.Group>
                                     </Col>

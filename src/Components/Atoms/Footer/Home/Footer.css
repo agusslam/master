@@ -78,3 +78,11 @@
     color: #a97e08;
     font-family: 'Nunito Sans', sans-serif;
 }
+
+.wrap-connect a {
+    color: black;
+}
+
+.wrap-connect a:hover {
+    color: black;
+}

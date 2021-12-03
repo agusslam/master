@@ -1,0 +1,47 @@
+.wrap-close-ico {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+.wrap-close-ico .style-cursor-contact {
+    cursor: pointer;
+}
+
+.wrap-content-con {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.wrap-des-contact {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrap-inp-contact {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrap-btn-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-profile-kirim {
+    width: 200px;
+    background-color: #ffcc00 !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.btn-profile-kirim:hover {
+    width: 200px;
+    background-color: #deb308 !important;
+    border: none !important;
+    cursor: pointer !important;
+}

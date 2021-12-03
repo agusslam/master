@@ -91,7 +91,7 @@ class Regis extends React.Component {
                                         name="nama"
                                         onChange={this.handleChangeText}
                                         id="nama"
-                                        placeHolder="Masukkan nama lengkap"
+                                        placeholder="Masukkan nama lengkap"
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
@@ -102,7 +102,7 @@ class Regis extends React.Component {
                                         name="username"
                                         onChange={this.handleChangeText}
                                         id="username"
-                                        placeHolder="Masukkan username"
+                                        placeholder="Masukkan username"
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
@@ -113,7 +113,7 @@ class Regis extends React.Component {
                                         name="email"
                                         onChange={this.handleChangeText}
                                         id="email"
-                                        PlaceHolder="Masukkan email"
+                                        placeholder="Masukkan email"
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
@@ -124,7 +124,7 @@ class Regis extends React.Component {
                                         name="phone"
                                         onChange={this.handleChangeText}
                                         id="phone"
-                                        placeHolder="Masukkan nomor seluler"
+                                        placeholder="Masukkan nomor seluler"
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
@@ -135,7 +135,7 @@ class Regis extends React.Component {
                                         name="password"
                                         onChange={this.handleChangeText}
                                         id="password"
-                                        placeHolder="Masukkan Password"
+                                        placeholder="Masukkan Password"
                                     />
                                 </Form.Group>
                                 <Button className="btn-submit" onClick={this.handleRegister} title={'Daftar'} loading={this.props.isLoading} />

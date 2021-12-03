@@ -57,3 +57,15 @@
     padding-right: 20%;
     text-align: justify;
 }
+
+.wrap-text-contact a {
+    color: black;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.wrap-text-contact a:hover {
+    color: rgb(50, 49, 49);
+    font-weight: 800;
+    text-decoration: none;
+}

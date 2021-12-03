@@ -11,6 +11,8 @@ import Spin from '../../../Spinner/index'
 
 import { getDataDebt, FlagStatus } from '../../../../../Actions/admin'
 
+const API_URL = "https://apiauthv1.herokuapp.com"
+
 class DashborAdminDeta extends React.Component {
     state = {
         idkpr: '',        
@@ -180,6 +182,16 @@ class DashborAdminDeta extends React.Component {
                                                 {this.props.dataDebitur
                                                     ? this.props.dataDebitur.result.idrumah.developer.namadeveloper
                                                     : null}</Col>
+                                        </Row>
+                                        <Row className="unduh-style">
+                                            <Col md="6">
+                                                {/* <p>Unduh <a href={API_URL+"/kpr/formkpr/"+(this.props.dataDebitur ? this.props.dataDebitur.result.formkredit : null)} download target="_blank">Form Pengajuan KPR</a></p>
+                                                <p>Unduh <a href={API_URL+"/kpr/ektp/"+(this.props.dataDebitur ? this.props.dataDebitur.result.ektp : null)} target="_blank">Foto KTP</a></p>
+                                                <p>Unduh <a href={API_URL+"/kpr/foto/"+(this.props.dataDebitur ? this.props.dataDebitur.result.foto : null)} target="_blank">Foto Selfie dengan KTP</a></p>
+                                                <p>Unduh <a href={API_URL+"/kpr/slip/"+(this.props.dataDebitur ? this.props.dataDebitur.result.slip : null)} target="_blank">Slip Gaji</a></p>
+                                                <p>Unduh <a href={API_URL+"/kpr/rk/"+(this.props.dataDebitur ? this.props.dataDebitur.result.rk : null)} target="_blank">Rekening Koran</a></p> */}
+                                            </Col>
+                                            <Col md="6"></Col>
                                         </Row>
                                     </Col>
                                     <Col md="4">
@@ -416,7 +428,7 @@ class DashborAdminDeta extends React.Component {
                                                     onChange={this.handleCheckSetuju}
                                                 />
                                             </Col>
-                                            <Col><Button onClick={() => this.ClickDebitur()}>Update</Button></Col>
+                                            <Col><Button onClick={() => this.ClickDebitur()}>Perbarui</Button></Col>
                                         </Row>
                                         
 

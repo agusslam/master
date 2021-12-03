@@ -34,6 +34,21 @@
     line-height: 10px;
 }
 
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .unduh-style {
+    padding-top: 20px;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .unduh-style a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .unduh-style a:hover {
+    text-decoration: none;
+    font-style: italic;
+    color: chocolate;
+}
+
 .wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .detail-debitur .titikdua {
     width: 10px;
 }

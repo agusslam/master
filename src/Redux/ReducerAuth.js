@@ -55,7 +55,7 @@ const AuthReducer = (state = initialState, action) => {
         case 'GET_INFODEBITUR':
             return {
                 ...state,
-                isLoading: action.value
+                infoDebi: action.value
             }
         case 'LOGOUT':
             return {

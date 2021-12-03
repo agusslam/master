@@ -16,7 +16,7 @@ class Foot extends React.Component {
                     <Col md="4">
                         <p></p>
                         <p><a href="/simulasi" className="link-footer">Simulasi KPR</a></p>
-                        <p><a href="/about" className="link-footer">About Us</a></p>
+                        <p><a href="/tentang" className="link-footer">About Us</a></p>
                         <p><a href="/contact" className="link-footer">Contact</a></p>                        
                     </Col>
                     <Col md="4">
@@ -27,10 +27,10 @@ class Foot extends React.Component {
                         <p>Fax. +6221 798 0625, 798 0238, 798 0244</p>
                         <Row className="wrap-connect">
                             <Col md="3" className="style-connect"><p>Connect</p></Col>
-                            <Col md="1" className="style-iconbrand"><FontAwesomeIcon icon={faFacebook} size='2x' /></Col>
-                            <Col md="1" className="style-iconbrand"><FontAwesomeIcon icon={faTwitter} size='2x' /></Col>
-                            <Col md="1" className="style-iconbrand"><FontAwesomeIcon icon={faYoutube} size='2x' /></Col>
-                            <Col md="1" className="style-iconbrand"><FontAwesomeIcon icon={faInstagram} size='2x' /></Col>
+                            <Col md="1" className="style-iconbrand"><a href="https://www.facebook.com/kbbukopin"><FontAwesomeIcon icon={faFacebook} size='2x' /></a></Col>
+                            <Col md="1" className="style-iconbrand"><a href="https://twitter.com/kbbukopin"><FontAwesomeIcon icon={faTwitter} size='2x' /></a></Col>
+                            <Col md="1" className="style-iconbrand"><a href="https://www.youtube.com/user/SiagaBukopin"><FontAwesomeIcon icon={faYoutube} size='2x' /></a></Col>
+                            <Col md="1" className="style-iconbrand"><a href="https://www.instagram.com/kbbukopin/"><FontAwesomeIcon icon={faInstagram} size='2x' /></a></Col>
                         </Row>
                     </Col>
                     <Col md="4" className="logoBukopin">

@@ -2,10 +2,12 @@ import React from 'react'
 
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { connect } from 'react-redux'
 import '../Contact/ContactContent.css'
 // import ImageBanner from '../../../../Assets/Images/hubungi_kami.png'
 import ImageBanner2 from '../../../../Assets/Images/BG_KPR_2.png'
 import ImageBanner3 from '../../../../Assets/Images/bgdashboard.png'
+import ModalDialogContact from '../../Modals/Contac'
 
 const mapStyles = {
     width: '100%',
@@ -19,10 +21,20 @@ const containerStyle = {
   }
 
 class ContactC extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+    contactForm = () => {
+        this.props.setDialog()
+        this.props.setTextDialog()
+    }
+
     render() {
         return (
             <Container fluid={true}>
                 <Row>
+                <ModalDialogContact show={this.props.isOpenDialog} onHide={this.handleClose} title={this.props.titleD} />
                     <Col md="12" className="title-hubungi"><h1>HUBUNGI KAMI</h1></Col>
                     <Col md="12" className="img-hubungikami2" style={{ backgroundImage: `url(${ImageBanner2})` }}>
                         <Row className="wrapper-alamat">
@@ -102,8 +114,8 @@ class ContactC extends React.Component {
                             akan kami layani.
                         </p>
                         <p className="wrap-text-contact">
-                            Ket:*Dengan klik “di sini”, akan terbuka form isian pengaduan/permohonan nasabah
-                        </p>
+                            Ket:*Dengan klik <a href="#" onClick={this.contactForm}>di sini</a>, akan terbuka form isian pengaduan/permohonan nasabah
+                        </p> 
                     </Col>
                 </Row>
             </Container>
@@ -111,4 +123,16 @@ class ContactC extends React.Component {
     }
 }
 
-export default GoogleApiWrapper({ apiKey: 'AIzaSyDMKWQWLBryC4QmsobS6VLbZ6mBqfRaaLQ   ' })(ContactC)
+const mapsStateToProps = (state) => ({
+    isOpenDialog: state.modalReducer.openDialog,
+    titleD: state.modalReducer.titleAlert,
+})
+
+const mapsDispatchToProps = (dispatch) => ({
+    setDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: true }),
+    setTextDialog: (data) => dispatch({ type: 'CHANGE_TEXTDIALOG', value: data }),
+    setCloseDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: false })
+})
+
+const wrapperGoogle = GoogleApiWrapper({ apiKey: 'AIzaSyDMKWQWLBryC4QmsobS6VLbZ6mBqfRaaLQ   ' })(ContactC)
+export default connect(mapsStateToProps, mapsDispatchToProps)(wrapperGoogle)

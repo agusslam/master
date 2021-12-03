@@ -1,0 +1,86 @@
+.custom-dialog {
+    left: 33%;
+    bottom: 5%;
+}
+
+.custom-dialog .times-style {
+    padding-top: 10px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.custom-dialog .prof-2 .thumbnail-image-prof {
+    width: 100px;
+    height: 80px;
+    padding-left: 20px;
+}
+
+.title-name {
+    display: flex;
+    align-items: center;
+}
+
+.custom-dialog .detail-prof {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.button-confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.custom-dialog .wrap-btn-prof {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.custom-dialog .wrap-btn-prof .btn-profile {
+    width: 100%;
+    background-color: #ffcc00 !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.custom-dialog .wrap-btn-prof .btn-profile:hover {
+    width: 100%;
+    background-color: #e8bb06 !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.custom-dialog .wrap-btn-prof2 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.custom-dialog .wrap-btn-prof2 .btn-profile {
+    width: 100%;
+    background-color: #ffcc00 !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.custom-dialog .wrap-btn-prof2 .btn-profile:hover {
+    width: 100%;
+    background-color: #e8bb06 !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.style-cursor {
+    cursor: pointer;
+}
