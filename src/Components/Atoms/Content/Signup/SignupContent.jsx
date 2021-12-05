@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap'
 import { connect } from 'react-redux'
-
+import Validator from 'validator'
 import '../Signup/SignupContent.css'
 import { registerUserAPI } from '../../../../Actions/auth'
 import Button from '../../../Atoms/Button/Sign'
@@ -30,6 +30,8 @@ class Regis extends React.Component {
 
     handleRegister = async () => {
         const { username, password, nama, email, phone } = this.state
+        const regx = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#.,])(?=.{8,})")
+        const isOK = regx.test(password)
         if (!nama) {
             this.props.setDialog()
             this.props.setTextDialog('Nama lengkap wajib diisi')
@@ -39,17 +41,26 @@ class Regis extends React.Component {
         } else if (!email) {
             this.props.setDialog()
             this.props.setTextDialog('Email wajib diisi')
+        } else if (Validator.isEmail(email) === false) {
+            this.props.setDialog()
+            this.props.setTextDialog('Email tidak valid')
         } else if (!phone) {
             this.props.setDialog()
             this.props.setTextDialog('Phone wajib diisi')
+        } else if (Validator.isMobilePhone(phone) === false) {
+            this.props.setDialog()
+            this.props.setTextDialog('Phone tidak valid')
         } else if (!password) {
             this.props.setDialog()
             this.props.setTextDialog('Password wajib diisi')
+        } else if (!isOK) {
+            this.props.setDialog()
+            this.props.setTextDialog('Password wajib terdiri dari huruf Besar, kecil, angka dan (!@#.,)')
         } else {
             const resRegister = await this.props.registerAPI({
                 username, password, nama, email, phone
             }).catch(err => err)
-            if (resRegister.status === 200) {                
+            if (resRegister.status === 200) {
                 this.props.setDialog()
                 this.props.setTextDialog('Registrasi Berhasil')
                 this.setState = {
@@ -62,6 +73,7 @@ class Regis extends React.Component {
             } else {
                 this.props.setDialog()
                 this.props.setTextDialog('Registrasi Gagal')
+                this.props.changeLoad()
             }
         }
 
@@ -161,7 +173,8 @@ const mapsDispatchToProps = (dispatch) => ({
     registerAPI: (data) => dispatch(registerUserAPI(data)),
     setDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: true }),
     setTextDialog: (data) => dispatch({ type: 'CHANGE_TEXTDIALOG', value: data }),
-    setCloseDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: false })
+    setCloseDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: false }),
+    changeLoad: () => dispatch({ type: 'CHANGE_LOADING', value: false })
 })
 
 export default connect(mapsStateToProps, mapsDispatchToProps)(Regis)
