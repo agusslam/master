@@ -1,8 +1,10 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-
+import Cookies from 'universal-cookie'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import '../DashAdminDetail/DashAdmDet.css'
+import axios from 'axios'
+import FileDownload from 'js-file-download'
 
 import { connect } from 'react-redux'
 
@@ -12,13 +14,19 @@ import Spin from '../../../Spinner/index'
 import { getDataDebt, FlagStatus } from '../../../../../Actions/admin'
 import ModalDialog from '../../../Modals/Alert'
 
-const API_URL = "https://apiauthv1.herokuapp.com"
+const cookies = new Cookies()
+const token = cookies.get('_tKJKASKHDS')
+
+// const API_URL = "https://apiauthv1.herokuapp.com"
+const API_URL = "http://localhost:8008"
 
 class DashborAdminDeta extends React.Component {
     state = {
         idkpr: '',
         pengajuan: false,
-        setuju: false
+        setuju: false,
+        statusAdmin: false,
+        tolakan: ''
     }
 
     constructor(props) {
@@ -40,8 +48,8 @@ class DashborAdminDeta extends React.Component {
         console.log(this.props.isState)
     }
 
-    // componentDidUpdate() {
-        // console.log(this.props.isState)
+    // componentDidUpdate(){
+    //     console.log(this.props.isState)
     // }
 
     handleCheckPengajuan = (e) => {
@@ -78,8 +86,62 @@ class DashborAdminDeta extends React.Component {
         console.log(this.props.ubahSetuju(e.target.checked))
     }
 
+    handleChangeText = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value,
+        })
+    }
+
+    formUnduh = (e) => {
+        // console.log(e)
+        axios({
+            url: `${API_URL}/kpr/formkpr/${e}`,
+            method: 'GET',
+            headers: { Authorization: `Bearer ${token}` },
+            responseType: 'blob', // Important
+        }).then((response) => {
+            FileDownload(response.data, e);
+        });
+    }
+
+    ktpUnduh = (e) => {
+        // console.log(e)
+        axios({
+            url: `${API_URL}/kpr/ektp/${e}`,
+            method: 'GET',
+            headers: { Authorization: `Bearer ${token}` },
+            responseType: 'blob', // Important
+        }).then((response) => {
+            FileDownload(response.data, e);
+        });
+    }
+
+    slipUnduh = (e) => {
+        // console.log(e)
+        axios({
+            url: `${API_URL}/kpr/slip/${e}`,
+            method: 'GET',
+            headers: { Authorization: `Bearer ${token}` },
+            responseType: 'blob', // Important
+        }).then((response) => {
+            FileDownload(response.data, e);
+        });
+    }
+
+    rkUnduh = (e) => {
+        // console.log(e)
+        axios({
+            url: `${API_URL}/kpr/rk/${e}`,
+            method: 'GET',
+            headers: { Authorization: `Bearer ${token}` },
+            responseType: 'blob', // Important
+        }).then((response) => {
+            FileDownload(response.data, e);
+        });
+    }
 
     ClickDebitur = async () => {
+        const { tolakan } = this.state
         let data = {
             pengajuan: this.props.stepPengajuan,
             id: this.props.dataDebitur.result._id,
@@ -88,7 +150,8 @@ class DashborAdminDeta extends React.Component {
             slik: this.props.stepSlik,
             legal: this.props.stepLegal,
             komite: this.props.stepKomite,
-            setuju: this.props.stepSetuju
+            setuju: this.props.stepSetuju,
+            tolakan: tolakan
         }
         const resUpdate = await this.props.updateFlag(data).catch(err => err)
         if (resUpdate.status === 200) {
@@ -108,11 +171,11 @@ class DashborAdminDeta extends React.Component {
                 backgroundImage: `url(${require('../../../../../Assets/Images/bgdashboard.png').default})`
                 , backgroundSize: 'cover'
             }}>
-                <Row className="wrapper-dashburd">
+                <Row className="wrapper-dashburd2">
                     <Route component={Sidemenu} />
                     <ModalDialog show={this.props.isOpenDialog} onHide={this.handleClose} title={this.props.titleD} />
                     <Col md="9">
-                        <Row className="wrapper-side-right">
+                        <Row className="wrapper-side-right2">
                             <Col md="12">
                                 <h2 className="title-dashburd">My Debitur List - Detail Debitur</h2>
                             </Col>
@@ -191,13 +254,29 @@ class DashborAdminDeta extends React.Component {
                                         </Row>
                                         <Row className="unduh-style">
                                             <Col md="6">
-                                                {/* <p>Unduh <a href={API_URL+"/kpr/formkpr/"+(this.props.dataDebitur ? this.props.dataDebitur.result.formkredit : null)} download target="_blank">Form Pengajuan KPR</a></p>
-                                                <p>Unduh <a href={API_URL+"/kpr/ektp/"+(this.props.dataDebitur ? this.props.dataDebitur.result.ektp : null)} target="_blank">Foto KTP</a></p>
-                                                <p>Unduh <a href={API_URL+"/kpr/foto/"+(this.props.dataDebitur ? this.props.dataDebitur.result.foto : null)} target="_blank">Foto Selfie dengan KTP</a></p>
-                                                <p>Unduh <a href={API_URL+"/kpr/slip/"+(this.props.dataDebitur ? this.props.dataDebitur.result.slip : null)} target="_blank">Slip Gaji</a></p>
-                                                <p>Unduh <a href={API_URL+"/kpr/rk/"+(this.props.dataDebitur ? this.props.dataDebitur.result.rk : null)} target="_blank">Rekening Koran</a></p> */}
+                                                <p>Unduh <a href="# " onClick={() => this.formUnduh(this.props.dataDebitur ? this.props.dataDebitur.result.formkredit : null)}>Form Pengajuan KPR</a></p>
+                                                <p>Unduh <a href="# " onClick={() => this.ktpUnduh(this.props.dataDebitur ? this.props.dataDebitur.result.ektp : null)}>Foto KTP</a></p>
+                                                <p>Unduh <a href="# " onClick={() => this.slipUnduh(this.props.dataDebitur ? this.props.dataDebitur.result.slip : null)}>Slip Gaji</a></p>
+                                                <p>Unduh <a href="# " onClick={() => this.rkUnduh(this.props.dataDebitur ? this.props.dataDebitur.result.rk : null)}>Mutasi Rekening</a></p>
+
                                             </Col>
-                                            <Col md="6"></Col>
+                                            <Col md="6">
+                                                <Row>
+                                                    <Col md="12">
+                                                        <p>Catatan / Alasan di tolak</p>
+                                                    </Col>
+                                                    <Col md="12">
+                                                        <Form.Control 
+                                                            as="textarea" 
+                                                            rows={3} 
+                                                            disabled={((this.props.stepAdmin ? this.props.stepAdmin : null) !== "admin3")&&((this.props.stepAksep ? this.props.stepAksep : null) !== "aksep3")&&((this.props.stepSlik ? this.props.stepSlik : null) !== "slik3")&&((this.props.stepLegal ? this.props.stepLegal : null) !== "legal3")&&((this.props.stepKomite ? this.props.stepKomite : null) !== "komite3")}
+                                                            name="tolakan"
+                                                            onChange={this.handleChangeText}    
+                                                            id="tolakan"                                                        
+                                                        />
+                                                    </Col>
+                                                </Row>
+                                            </Col>
                                         </Row>
                                     </Col>
                                     <Col md="4">
@@ -205,7 +284,7 @@ class DashborAdminDeta extends React.Component {
                                             <Col md="12">
                                                 <Form.Check
                                                     inline
-                                                    value={this.props.stepPengajuan ? this.props.stepPengajuan : null}
+                                                    value={this.props.stepPengajuan ? this.props.stepPengajuan : ""}
                                                     label="Pengajuan"
                                                     type="checkbox"
                                                     id="pengajuan"
@@ -220,6 +299,9 @@ class DashborAdminDeta extends React.Component {
                                                     inline
                                                     label="Persayarat Administrasi"
                                                     type="checkbox"
+                                                    disabled={(this.props.stepPengajuan ? this.props.stepPengajuan : null) === null}
+                                                    checked={((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin3") || ((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin2")}
+                                                    onChange={e => { }}
                                                 />
                                             </Col>
                                             <Col md="12" className="radio">
@@ -231,9 +313,8 @@ class DashborAdminDeta extends React.Component {
                                                     id="admindiproses"
                                                     className="radio-button"
                                                     name="admin"
-                                                    // defaultChecked={this.props.dataDebitur ? this.props.dataDebitur.result.administrasi[0].status : null }
+                                                    disabled={(this.props.stepPengajuan ? this.props.stepPengajuan : null) === null}
                                                     checked={(this.props.stepAdmin ? this.props.stepAdmin : null) === "admin1"}
-                                                    // checked={this.state.administrasi === 'admin1'}
                                                     onChange={this.handleOptionChange}
                                                 />
                                                 <Form.Check
@@ -244,8 +325,8 @@ class DashborAdminDeta extends React.Component {
                                                     id="adminditerima"
                                                     className="radio-button"
                                                     name="admin"
+                                                    disabled={(this.props.stepPengajuan ? this.props.stepPengajuan : null) === null}
                                                     checked={(this.props.stepAdmin ? this.props.stepAdmin : null) === "admin2"}
-                                                    // checked={this.state.administrasi === 'admin2'}
                                                     onChange={this.handleOptionChange}
                                                 />
                                                 <Form.Check
@@ -256,8 +337,8 @@ class DashborAdminDeta extends React.Component {
                                                     id="adminditolak"
                                                     className="radio-button"
                                                     name="admin"
+                                                    disabled={(this.props.stepPengajuan ? this.props.stepPengajuan : null) === null}
                                                     checked={(this.props.stepAdmin ? this.props.stepAdmin : null) === "admin3"}
-                                                    // checked={this.state.administrasi === 'admin3'}
                                                     onChange={this.handleOptionChange}
                                                 />
                                             </Col>
@@ -269,6 +350,9 @@ class DashborAdminDeta extends React.Component {
                                                     inline
                                                     label="Aseptasi Financial"
                                                     type="checkbox"
+                                                    disabled={((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin1") || ((this.props.stepAdmin ? this.props.stepAdmin : null) === null) || ((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin3")}
+                                                    checked={((this.props.stepAksep ? this.props.stepAksep : null) === "aksep2") || ((this.props.stepAksep ? this.props.stepAksep : null) === "aksep3")}
+                                                    onChange={e => { }}
                                                 />
                                             </Col>
                                             <Col md="12" className="radio">
@@ -278,7 +362,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diproses"
                                                     type="radio"
                                                     className="radio-button"
-                                                    // defaultChecked={this.props.dataDebitur ? this.props.dataDebitur.result.administrasi[0].status : null }
+                                                    disabled={((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin1") || ((this.props.stepAdmin ? this.props.stepAdmin : null) === null) || ((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin3")}
                                                     checked={(this.props.stepAksep ? this.props.stepAksep : null) === "aksep1"}
                                                     onChange={this.handleOptionAksep}
                                                 />
@@ -288,6 +372,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diterima"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin1") || ((this.props.stepAdmin ? this.props.stepAdmin : null) === null) || ((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin3")}
                                                     checked={(this.props.stepAksep ? this.props.stepAksep : null) === "aksep2"}
                                                     onChange={this.handleOptionAksep}
                                                 />
@@ -297,6 +382,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Ditolak"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin1") || ((this.props.stepAdmin ? this.props.stepAdmin : null) === null) || ((this.props.stepAdmin ? this.props.stepAdmin : null) === "admin3")}
                                                     checked={(this.props.stepAksep ? this.props.stepAksep : null) === "aksep3"}
                                                     onChange={this.handleOptionAksep}
                                                 />
@@ -309,6 +395,9 @@ class DashborAdminDeta extends React.Component {
                                                     inline
                                                     label="Pengecekan Slik"
                                                     type="checkbox"
+                                                    disabled={((this.props.stepAksep ? this.props.stepAksep : null) === "aksep1") || ((this.props.stepAksep ? this.props.stepAksep : null) === null) || ((this.props.stepAksep ? this.props.stepAksep : null) === "aksep3")}
+                                                    checked={((this.props.stepSlik ? this.props.stepSlik : null) === "slik2") || ((this.props.stepSlik ? this.props.stepSlik : null) === "slik3")}
+                                                    onChange={e => { }}
                                                 />
                                             </Col>
                                             <Col md="12" className="radio">
@@ -318,7 +407,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diproses"
                                                     type="radio"
                                                     className="radio-button"
-                                                    // defaultChecked={this.props.dataDebitur ? this.props.dataDebitur.result.administrasi[0].status : null }
+                                                    disabled={((this.props.stepAksep ? this.props.stepAksep : null) === "aksep1") || ((this.props.stepAksep ? this.props.stepAksep : null) === null) || ((this.props.stepAksep ? this.props.stepAksep : null) === "aksep3")}
                                                     checked={(this.props.stepSlik ? this.props.stepSlik : null) === "slik1"}
                                                     onChange={this.handleOptionalSlik}
                                                 />
@@ -328,6 +417,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diterima"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepAksep ? this.props.stepAksep : null) === "aksep1") || ((this.props.stepAksep ? this.props.stepAksep : null) === null) || ((this.props.stepAksep ? this.props.stepAksep : null) === "aksep3")}
                                                     checked={(this.props.stepSlik ? this.props.stepSlik : null) === "slik2"}
                                                     onChange={this.handleOptionalSlik}
                                                 />
@@ -337,6 +427,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Ditolak"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepAksep ? this.props.stepAksep : null) === "aksep1") || ((this.props.stepAksep ? this.props.stepAksep : null) === null) || ((this.props.stepAksep ? this.props.stepAksep : null) === "aksep3")}
                                                     checked={(this.props.stepSlik ? this.props.stepSlik : null) === "slik3"}
                                                     onChange={this.handleOptionalSlik}
                                                 />
@@ -349,6 +440,9 @@ class DashborAdminDeta extends React.Component {
                                                     inline
                                                     label="Pengecekan Legal"
                                                     type="checkbox"
+                                                    disabled={((this.props.stepSlik ? this.props.stepSlik : null) === "slik1") || ((this.props.stepSlik ? this.props.stepSlik : null) === null) || ((this.props.stepSlik ? this.props.stepSlik : null) === "slik3")}
+                                                    checked={((this.props.stepLegal ? this.props.stepLegal : null) === "legal2") || ((this.props.stepLegal ? this.props.stepLegal : null) === "legal3")}
+                                                    onChange={e => { }}
                                                 />
                                             </Col>
                                             <Col md="12" className="radio">
@@ -358,7 +452,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diproses"
                                                     type="radio"
                                                     className="radio-button"
-                                                    // defaultChecked={this.props.dataDebitur ? this.props.dataDebitur.result.administrasi[0].status : null }
+                                                    disabled={((this.props.stepSlik ? this.props.stepSlik : null) === "slik1") || ((this.props.stepSlik ? this.props.stepSlik : null) === null) || ((this.props.stepSlik ? this.props.stepSlik : null) === "slik3")}
                                                     checked={(this.props.stepLegal ? this.props.stepLegal : null) === "legal1"}
                                                     onChange={this.handleOptionalLegal}
                                                 />
@@ -368,6 +462,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diterima"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepSlik ? this.props.stepSlik : null) === "slik1") || ((this.props.stepSlik ? this.props.stepSlik : null) === null) || ((this.props.stepSlik ? this.props.stepSlik : null) === "slik3")}
                                                     checked={(this.props.stepLegal ? this.props.stepLegal : null) === "legal2"}
                                                     onChange={this.handleOptionalLegal}
                                                 />
@@ -377,6 +472,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Ditolak"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepSlik ? this.props.stepSlik : null) === "slik1") || ((this.props.stepSlik ? this.props.stepSlik : null) === null) || ((this.props.stepSlik ? this.props.stepSlik : null) === "slik3")}
                                                     checked={(this.props.stepLegal ? this.props.stepLegal : null) === "legal3"}
                                                     onChange={this.handleOptionalLegal}
                                                 />
@@ -389,6 +485,9 @@ class DashborAdminDeta extends React.Component {
                                                     inline
                                                     label="Persetujuan Komite"
                                                     type="checkbox"
+                                                    disabled={((this.props.stepLegal ? this.props.stepLegal : null) === "legal1") || ((this.props.stepLegal ? this.props.stepLegal : null) === null) || ((this.props.stepLegal ? this.props.stepLegal : null) === "legal3")}
+                                                    checked={((this.props.stepKomite ? this.props.stepKomite : null) === "komite2") || ((this.props.stepKomite ? this.props.stepKomite : null) === "komite3")}
+                                                    onChange={e => { }}
                                                 />
                                             </Col>
                                             <Col md="12" className="radio">
@@ -398,7 +497,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diproses"
                                                     type="radio"
                                                     className="radio-button"
-                                                    // defaultChecked={this.props.dataDebitur ? this.props.dataDebitur.result.administrasi[0].status : null }
+                                                    disabled={((this.props.stepLegal ? this.props.stepLegal : null) === "legal1") || ((this.props.stepLegal ? this.props.stepLegal : null) === null) || ((this.props.stepLegal ? this.props.stepLegal : null) === "legal3")}
                                                     checked={(this.props.stepKomite ? this.props.stepKomite : null) === "komite1"}
                                                     onChange={this.handleOptionalKomite}
                                                 />
@@ -408,6 +507,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Diterima"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepLegal ? this.props.stepLegal : null) === "legal1") || ((this.props.stepLegal ? this.props.stepLegal : null) === null) || ((this.props.stepLegal ? this.props.stepLegal : null) === "legal3")}
                                                     checked={(this.props.stepKomite ? this.props.stepKomite : null) === "komite2"}
                                                     onChange={this.handleOptionalKomite}
                                                 />
@@ -417,6 +517,7 @@ class DashborAdminDeta extends React.Component {
                                                     label="Ditolak"
                                                     type="radio"
                                                     className="radio-button"
+                                                    disabled={((this.props.stepLegal ? this.props.stepLegal : null) === "legal1") || ((this.props.stepLegal ? this.props.stepLegal : null) === null) || ((this.props.stepLegal ? this.props.stepLegal : null) === "legal3")}
                                                     checked={(this.props.stepKomite ? this.props.stepKomite : null) === "komite3"}
                                                     onChange={this.handleOptionalKomite}
                                                 />
@@ -426,10 +527,11 @@ class DashborAdminDeta extends React.Component {
                                             <Col md="12">
                                                 <Form.Check
                                                     inline
-                                                    value={this.props.stepSetuju ? this.props.stepSetuju : this.state.setuju}
+                                                    value={this.props.stepSetuju ? this.props.stepSetuju : ""}
                                                     label="KPR Disetujui"
                                                     type="checkbox"
                                                     id="setuju"
+                                                    disabled={((this.props.stepKomite ? this.props.stepKomite : null) === "komite1") || ((this.props.stepKomite ? this.props.stepKomite : null) === null) || ((this.props.stepKomite ? this.props.stepKomite : null) === "komite3")}
                                                     defaultChecked={this.props.stepSetuju ? this.props.stepSetuju : null}
                                                     onChange={this.handleCheckSetuju}
                                                 />

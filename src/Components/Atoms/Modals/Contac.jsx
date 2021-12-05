@@ -1,16 +1,11 @@
 import React from 'react'
-import { Row, Col, Modal, Button, Form, FloatingLabel } from 'react-bootstrap'
+import { Row, Col, Modal, Button, Form } from 'react-bootstrap'
 import '../Modals/Contac.css'
 import { connect } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 class modalAlert extends React.Component {
-    constructor(props) {
-        super(props)
-        console.log(props)
-    }
-
     handleClose = async () => {
         this.props.setCloseDialog()
     }

@@ -3,7 +3,7 @@
     padding-top: 3%;
     padding-right: 5%;
     padding-bottom: 3%;
-    padding-left: 5%;
+    padding-left: 8%;
     height: auto;
 }
 
@@ -23,7 +23,25 @@
     padding-top: 20px;
 }
 
+.wrapper-dashburd2 .wrapper-side-right2 .wrapper-side-right12 .wrap-ajukan2 .wrapper-next-admin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .style-over {
     overflow: scroll !important;
     height: 300px;
+}
+
+.style-table:hover {
+    background-color: #ffbc00;
+    cursor: pointer;
+}
+
+.style-table-active {
+    background-color: #ffbc00 !important;
+    cursor: pointer;
 }

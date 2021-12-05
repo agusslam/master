@@ -18,7 +18,7 @@ import { getRumah, getInfo } from '../../../../../Actions/kpr'
 import '../DashUserAjukanKPR/PagingHouse.css'
 
 const cookies = new Cookies()
-const API_URL_IMG = "https://apiauthv1.herokuapp.com/house/image/"
+const API_URL_IMG = "https://apiauthv1.herokuapp.com/house/image"
 // const API_URL_IMG = "http://localhost:8008/house/image/"
 
 class PagingHouse extends React.Component {
@@ -46,7 +46,8 @@ class PagingHouse extends React.Component {
                         </Row>
                         <Row className="wrap-list-rumah-paging">
                             <Col md="12" className="img-rumah-paging" style={{
-                                backgroundImage: "url(" + API_URL_IMG + item.image + "" + ")",
+                                // backgroundImage: "url(" + API_URL_IMG + item.image + "" + ")",
+                                backgroundImage: `url(${API_URL_IMG}/${item.image})`,
                                 backgroundPosition: 'top',
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat'

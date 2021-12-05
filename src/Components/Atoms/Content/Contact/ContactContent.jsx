@@ -21,9 +21,6 @@ const containerStyle = {
   }
 
 class ContactC extends React.Component {
-    constructor(props){
-        super(props)
-    }
 
     contactForm = () => {
         this.props.setDialog()
@@ -114,7 +111,7 @@ class ContactC extends React.Component {
                             akan kami layani.
                         </p>
                         <p className="wrap-text-contact">
-                            Ket:*Dengan klik <a href="#" onClick={this.contactForm}>di sini</a>, akan terbuka form isian pengaduan/permohonan nasabah
+                            Ket:*Dengan klik <a href="/#" onClick={this.contactForm}>di sini</a>, akan terbuka form isian pengaduan/permohonan nasabah
                         </p> 
                     </Col>
                 </Row>

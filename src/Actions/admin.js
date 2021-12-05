@@ -4,8 +4,8 @@ import Cookies from 'universal-cookie'
 const cookies = new Cookies()
 const token = cookies.get('_tKJKASKHDS')
 
-// const API_URL = 'http://localhost:8008'
-const API_URL = 'https://apiauthv1.herokuapp.com'
+const API_URL = 'http://localhost:8008'
+// const API_URL = 'https://apiauthv1.herokuapp.com'
 const Header = { headers: { Authorization: `Bearer ${token}` } }
 
 export const FlagStatus = (data) => async (dispatch) => {
@@ -19,7 +19,8 @@ export const FlagStatus = (data) => async (dispatch) => {
             slik: data.slik,
             legal: data.legal,
             komite: data.komite,
-            setuju: data.setuju
+            setuju: data.setuju,
+            tolakan: data.tolakan
         }, Header)
         dispatch({ type: 'CHANGE_LOADING', value: false })
         return Promise.resolve(res.data)

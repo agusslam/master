@@ -18,8 +18,8 @@ if (token) {
         }
 
     } else {
-        console.log("enggak kok")
-        console.log(aku.role)
+        // console.log("enggak kok")
+        // console.log(aku.role)
         initialState = {
             user: aku.username,
             isLoading: false,

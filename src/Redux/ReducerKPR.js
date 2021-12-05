@@ -1,5 +1,5 @@
 let initialState = {
-    listKPR : '',
+    listKPR: '',
     getDeb: '',
     pengajuan: '',
     administrasi: '',
@@ -9,8 +9,9 @@ let initialState = {
     komite: '',
     setuju: '',
     angsuran120: '',
-    angsuran60:'',
-    angsuran180:''
+    angsuran60: '',
+    angsuran180: '',
+    getID: ''
 }
 const ReducerKPR = (state = initialState, action) => {
     switch (action.type) {
@@ -48,37 +49,42 @@ const ReducerKPR = (state = initialState, action) => {
             return {
                 ...state,
                 slik: action.value
-            }  
+            }
         case 'CHANGE_LEGALSTEP':
             return {
-            ...state,
-            legal: action.value
-        }    
+                ...state,
+                legal: action.value
+            }
         case 'CHANGE_KOMITESTEP':
-        return {
-            ...state,
-            komite: action.value
-        }  
+            return {
+                ...state,
+                komite: action.value
+            }
         case 'CHANGE_SETUJUSTEP':
-        return {
-            ...state,
-            setuju: action.value
-        } 
+            return {
+                ...state,
+                setuju: action.value
+            }
         case 'CHANGE_ANGSURAN120':
-        return {
-            ...state,
-            angsuran120: action.value
-        }  
+            return {
+                ...state,
+                angsuran120: action.value
+            }
         case 'CHANGE_ANGSURAN60':
-        return {
-            ...state,
-            angsuran60: action.value
-        } 
+            return {
+                ...state,
+                angsuran60: action.value
+            }
         case 'CHANGE_ANGSURAN180':
-        return {
-            ...state,
-            angsuran180: action.value
-        }               
+            return {
+                ...state,
+                angsuran180: action.value
+            }
+        case 'SAVE_ID':
+            return {
+                ...state,
+                getID: action.value
+            }
         default:
             return state
     }

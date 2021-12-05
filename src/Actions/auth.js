@@ -6,8 +6,8 @@ import jwt from 'jsonwebtoken'
 const cookies = new Cookies()
 const token = cookies.get('_tKJKASKHDS')
 
-const API_URL = 'https://apiauthv1.herokuapp.com'
-// const API_URL = 'http://localhost:8008'
+// const API_URL = 'https://apiauthv1.herokuapp.com'
+const API_URL = 'http://localhost:8008'
 const Header = { headers: { Authorization: `Bearer ${token}` } }
 
 export const loginUserAPI = (data) => async (dispatch) => {

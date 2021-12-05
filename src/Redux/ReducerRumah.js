@@ -11,7 +11,7 @@ const getUploadRK = cookies.get('_rk')
 const getUploadSlip = cookies.get('_slip')
 
 let initialState = ''
-console.log(getStep2)
+// console.log(getStep2)
 
 switch (true) {
     case ( (getSel !== undefined) && (getStep1 !== undefined) && (getStep2 === undefined) && (getUploadKTP === undefined) && (getUploadFoto === undefined) && (getStep3 === undefined) && (getUploadRK === undefined) && (getUploadSlip === undefined && (getStep4 === undefined)) ):

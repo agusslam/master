@@ -22,13 +22,13 @@ class NavbarDash extends React.Component {
         // this.props.setTextDialog2()
     }
 
-    componentDidMount() {
-        console.log(this.state)
-    }
+    // componentDidMount() {
+    //     console.log(this.state)
+    // }
 
-    componentDidUpdate() {
-        console.log(this.state)
-    }
+    // componentDidUpdate() {
+    //     console.log(this.state)
+    // }
 
     render() {
         return (

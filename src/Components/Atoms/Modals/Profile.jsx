@@ -8,11 +8,6 @@ import thumbnail from '../../../Assets/Images/thumnail.png'
 import { getDebtInfo, logout } from '../../../Actions/auth'
 
 class modalAlert2 extends React.Component {
-    constructor(props) {
-        super(props)
-        // console.log(this.props)
-    }
-
     handleClose = async () => {
         this.props.setCloseDialog2()
     }
@@ -23,7 +18,6 @@ class modalAlert2 extends React.Component {
 
     componentDidMount() {
         this.props.infoUser()
-        // console.log(this.props.infoProfile)
     }
 
     render() {

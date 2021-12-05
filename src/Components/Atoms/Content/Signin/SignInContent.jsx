@@ -81,9 +81,6 @@ class SignIn extends React.Component {
                             <Col md="4"><h1 className="title-signup">Sign In</h1></Col>
                             <Col md="8"></Col>
                             <Col md="4" className="wrap-logo-brand">
-                            {/* <img className="img-logo-brand" src={logoGoogle} alt="login-pro" />
-                            <img className="img-logo-brand" src={logoFace} alt="login-pro" />
-                            <img className="img-logo-brand" src={logoTweet} alt="login-pro" /> */}
                                 <Row>
                                     <Col md="4" className="wrap-bg-logo"><a href="https://account.google.com"><img className="img-logo-brand" src={logoGoogle} alt="login-pro" /></a></Col>
                                     <Col md="4" className="wrap-bg-logo"><a href="https://www.facebook.com"><img className="img-logo-brand" src={logoFace} alt="login-pro" /></a></Col>

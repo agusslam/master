@@ -4,10 +4,6 @@ import '../Modals/Alert.css'
 import { connect } from 'react-redux'
 
 class modalAlert extends React.Component {
-    constructor(props){
-        super(props)
-        console.log(props)
-    }
 
     handleClose = async () => {
         this.props.setCloseDialog()
