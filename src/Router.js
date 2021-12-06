@@ -18,7 +18,7 @@ import DashAdmin from './Components/DashboardAdmin/Dashboard'
 import DashAdminDet from './Components/DashboardAdmin/DetailList'
 import DashAdminLis from './Components/DashboardAdmin/ListSaya'
 
-import Paging from './Components/Atoms/Content/DashUser/DashUserAjukanKPR/PagingHouse'
+import Paging from './Components/Atoms/Content/DashUser/DashUserAjukanKPR/PagingSearchHouse'
 
 import { Provider } from "react-redux";
 import store from "./store";

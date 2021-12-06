@@ -23,11 +23,6 @@
     padding-top: 20px;
 }
 
-.inpt-searc {
-    
-    width: 300px !important;
-}
-
 .wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .list-rumah {
     padding: 10px 20px;
 }
@@ -45,6 +40,34 @@
     height: 140px;
     border-radius: 20px;
     padding-top: 10px;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .wrap-step {
+    display: flex;
+    align-items: center;padding-top: 20px;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .wrap-search {
+    padding-right: 40px;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .wrap-search .style-input-search {
+    height: 30px !important;
+    font-size: 10px;
+    width: 65%;
+    border-radius: 20px 0px 0px 20px;
+    border: none;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .wrap-search .style-btn-search {
+    height: 30px !important;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .title-klik-house {
+    padding-top: 30px;
 }
 
 .title-home h5 {

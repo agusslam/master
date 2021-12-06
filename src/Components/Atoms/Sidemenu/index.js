@@ -12,7 +12,7 @@ class SideMenu extends React.Component {
     render() {
         const dashClass = this.props.location.pathname === "/dashboardmember" ? "nav-style-user-orange" : "nav-style-user";
         const simulasiClass = this.props.location.pathname === "/simulasi" ? "nav-style-user-orange" : "nav-style-user";
-        const ajukanClass = this.props.location.pathname === "/ajukankpr" ? "nav-style-user-orange" : "nav-style-user";
+        const ajukanClass = this.props.location.pathname.startsWith("/ajukankpr") ? "nav-style-user-orange" : "nav-style-user";
         const bukopinClass = this.props.location.pathname === "/bukopin" ? "nav-style-user-orange" : "nav-style-user";
         const tentangClass = this.props.location.pathname === "/tentang" ? "nav-style-user-orange" : "nav-style-user";
         const contClass = this.props.location.pathname === "/contact" ? "nav-style-user-orange" : "nav-style-user";

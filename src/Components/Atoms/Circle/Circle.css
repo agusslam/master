@@ -16,26 +16,67 @@
     margin: 10px;
 }
 
-.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .inner {
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .outer-grey .inner {
     position: absolute;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     border-radius: 50%;
     background-color: #ffffff;
-    top: 15%;
-    left: 30%;
+    /* top: 15%;
+    left: 30%; */
 }
 
 .wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .step-angka {
     /* font-family: 'Nunito Sans', sans-serif; */
     font-weight: bold;
-    padding-left: 13px;
     color: #fcb900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .step-angka-grey {
     /* font-family: 'Nunito Sans', sans-serif; */
     font-weight: bold;
-    padding-left: 13px;
     color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberCircle {
+    /* font-family: 'Nunito Sans', sans-serif; */
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    /* padding: 8px; */
+
+    background: #fff;
+    border: 11px solid #b3b3b3;
+    color: #b3b3b3;
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.numberCircleOrange {
+    /* font-family: 'Nunito Sans', sans-serif; */
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    /* padding: 8px; */
+
+    background: #fff;
+    border: 11px solid #fcb900;
+    color: #fcb900;
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .numberCircle .wrapper-text-circle p {
+    font-size: 25px;
+    font-weight: 600;
 }

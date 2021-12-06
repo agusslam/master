@@ -114,30 +114,17 @@ class UserAjukan2 extends React.Component {
                             <Col md="12" className="wrapper-side-right1">
                                 <Row className="wrap-ajukan">
                                     <Col md="12"><h5>Form Pengajuan KPR</h5></Col>
-                                    {/* <Col md="12"><h5>Search</h5></Col> */}
-                                    <Lingkaran md="2" className="outer" aktif={this.props.circleS1}>
-                                        <Row className="inner">
-                                            <Col md="12" className="step-angka"><h1>1</h1></Col>
-                                        </Row>
-                                    </Lingkaran>
-                                    <Panjang md="2" className="segipanjang" aktif2={this.props.panjangS1}></Panjang>
-                                    <Lingkaran2 md="2" className="outer" aktif={this.props.circleS2}>
-                                        <Row className="inner">
-                                            <Col md="12" className="step-angka"><h1>2</h1></Col>
-                                        </Row>
-                                    </Lingkaran2>
-                                    <Panjang2 md="2" className="segipanjang" aktif2={this.props.panjangS2} />
-                                    <Lingkaran3 md="2" className="outer" aktif={this.props.circleS3}>
-                                        <Row className="inner">
-                                            <Col md="12" className="step-angka"><h1>3</h1></Col>
-                                        </Row>
-                                    </Lingkaran3>
-                                    <Panjang3 md="2" className="segipanjang" aktif2={this.props.panjangS3}></Panjang3>
-                                    <Lingkaran4 md="2" className="outer" aktif={this.props.circleS4}>
-                                        <Row className="inner">
-                                            <Col md="12" className="step-angka"><h1>4</h1></Col>
-                                        </Row>
-                                    </Lingkaran4>
+                                    <Col md="8" className="wrap-step">
+                                        <Lingkaran aktif={this.props.circleS1} />
+                                        <Panjang md="2" aktif2={this.props.panjangS1} />
+                                        <Lingkaran2 aktif={this.props.circleS2} />
+                                        <Panjang2 md="2" aktif2={this.props.panjangS2} />
+                                        <Lingkaran3 aktif={this.props.circleS3} />
+                                        <Panjang3 md="2" aktif2={this.props.panjangS3} />
+                                        <Lingkaran4 aktif={this.props.circleS4} />
+                                    </Col>
+                                    <Col md="4" className="wrap-search">
+                                    </Col>
                                     <Col md="12">
                                         <Row className="wrap-formuploadkpr">
                                             <Col md="12">

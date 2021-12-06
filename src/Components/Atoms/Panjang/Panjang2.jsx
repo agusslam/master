@@ -1,12 +1,16 @@
 import React from 'react'
-import {Col} from 'react-bootstrap'
+// import {Col} from 'react-bootstrap'
 import '../Panjang/Panjang.css'
 
 const pjg2 = ({ aktif2 }) => {
     if(!aktif2){
-        return <Col md="2" className="segipanjang-grey"></Col>
+        return (
+            <div className="garis-grey"></div>
+        )
     }
-    return <Col md="2" className="segipanjang"></Col>
+    return (
+        <div className="garis-orange"></div>
+    )
 }
 
 export default pjg2

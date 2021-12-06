@@ -1,38 +1,27 @@
 import React from 'react'
 
 import { Container, Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap'
-import ModalDialog from '../../../Modals/Alert'
 
-import { Route } from 'react-router-dom'
-import Cookies from 'universal-cookie'
+// import Cookies from 'universal-cookie'
+import ReactPaginate from 'react-paginate';
 
 import { connect } from 'react-redux'
-import ReactPaginate from 'react-paginate';
-import ButtonNext from '../../../Button/Next'
-import Spin from '../../../Spinner/index'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
-import Sidemenu from '../../../Sidemenu/index'
+// import Spin from '../../../Spinner/index'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+
+// import Sidemenu from '../../../Sidemenu/index'
 
 import { getRumah, getInfo, getSearchrumah } from '../../../../../Actions/kpr'
 
-import Lingkaran from '../../../Circle/Circle'
-import Lingkaran2 from '../../../Circle/Circle2'
-import Lingkaran3 from '../../../Circle/Circle3'
-import Lingkaran4 from '../../../Circle/Circle4'
+import '../DashUserAjukanKPR/PagingHouse.css'
 
-import Panjang from '../../../Panjang/Panjang'
-import Panjang2 from '../../../Panjang/Panjang2'
-import Panjang3 from '../../../Panjang/Panjang3'
-// import PagingHouse from '../DashUserAjukanKPR/PagingSearchHouse'
-import '../DashUserAjukanKPR/PilihHouse.css'
-
-const cookies = new Cookies()
+// const cookies = new Cookies()
 const API_URL_IMG = "https://apiauthv1.herokuapp.com/house/image"
 // const API_URL_IMG = "http://localhost:8008/house/image/"
 
-class UserAjukan1 extends React.Component {
+class PagingSearcHouse extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -97,20 +86,7 @@ class UserAjukan1 extends React.Component {
 
     componentDidMount() {
         this.receivedData()
-        // console.log(this.props.isState)
 
-    }
-
-    ClickImages = (e) => {
-        let cekHijau = document.querySelectorAll('.cek')
-        for (let i = 0; i < cekHijau.length; i++) {
-            cekHijau[i].style.display = 'none'
-        }
-        document.querySelector(`#idcent${e}`).style.display = 'block'
-        cookies.set('_sel', e)
-        this.props.nextAction()
-        cookies.set('_step1', true)
-        this.props.step1Action()
     }
 
     handleChangeTextSearch = (e) => {
@@ -165,86 +141,49 @@ class UserAjukan1 extends React.Component {
 
     render() {
         return (
-            <Container fluid={true} id="bg-dashburd" style={{
-                backgroundImage: `url(${require('../../../../../Assets/Images/bgdashboard.png').default})`
-                , backgroundSize: 'cover'
-            }}>
-                <Row className="wrapper-dashburd">
-                    <Route component={Sidemenu} />
-                    <ModalDialog show={this.props.isOpenDialog} onHide={this.handleClose} title={this.props.titleD} />
-                    <Col md="9">
-                        <Row className="wrapper-side-right">
-                            <Col md="12">
-                                <h2 className="title-dashburd">Pengajuan KPR</h2>
-                            </Col>
-                            <Col md="12" className="wrapper-side-right1">
-                                <Row className="wrap-ajukan">
-                                    <Col md="12"><h5>Form Pengajuan KPR</h5></Col>
-                                    <Col md="8" className="wrap-step">
-                                        <Lingkaran aktif={this.props.circleS1} />
-                                        <Panjang md="2" aktif2={this.props.panjangS1} />
-                                        <Lingkaran2 aktif={this.props.circleS2} />
-                                        <Panjang2 md="2" aktif2={this.props.panjangS2} />
-                                        <Lingkaran3 aktif={this.props.circleS3} />
-                                        <Panjang3 md="2" aktif2={this.props.panjangS3} />
-                                        <Lingkaran4 aktif={this.props.circleS4} />
-                                    </Col>
-                                    <Col md="4" className="wrap-search">
-                                        <InputGroup className="mb-3">
-                                            <FormControl
-                                                placeholder="masukkan lokasi rumah"
-                                                aria-label="Recipient's username"
-                                                aria-describedby="basic-addon2"
-                                                onChange={this.handleChangeTextSearch}
-                                                id="key"
-                                                className="style-input-search"
-                                            />
-                                            <Button variant="outline-secondary" className="style-btn-search" id="button-addon2" onClick={() => this.ClickSearch()}>
-                                                <FontAwesomeIcon icon={faSearch} />
-                                            </Button>
-                                        </InputGroup>
-                                    </Col>
-                                    <Col md="12" className="title-klik-house"><p>Silahkan Klik pada rumah yang diinginkan.</p></Col>
-                                    <Col md="12" className="list-rumah">
-                                        {<Spin loading={this.props.isLoading} />}
-                                        <Row>
-                                        {this.state.postData}
-                                        </Row>
-                                    </Col>
-                                    <div className="align-paging">
-                                        <ReactPaginate
-                                            previousLabel={"<<"}
-                                            nextLabel={">>"}
-                                            breakLabel={"..."}
-                                            breakClassName={"break-me"}
-                                            pageCount={this.state.pageCount}
-                                            marginPagesDisplayed={2}
-                                            pageRangeDisplayed={5}
-                                            onPageChange={this.handlePageClick}
-                                            containerClassName={"pagination"}
-                                            subContainerClassName={"pages pagination"}
-                                            activeClassName={"active"}
-                                            pageClassName={"page-item"}
-                                            pageLinkClassName={"page-link"}
-                                            previousClassName={"page-item"}
-                                            previousLinkClassName={"page-link"}
-                                            nextClassName={"page-item"}
-                                            nextLinkClassName={"page-link"}
-                                        />
-                                    </div>
-                                    <Col className="wrap-button-next">
-                                        {<ButtonNext className="btn-next" title={'Lanjut'} isNext={this.props.isFill} onClick={this.handleNext} />}
-                                    </Col>
-                                </Row>
-                            </Col>
-                            <Col md="12" className="wrapper-side-right2">
+            <div>
+                <Container>
+                    <Row>
+                        <InputGroup className="mb-3">
+                            <FormControl
+                                placeholder="masukkan lokasi rumah"
+                                aria-label="Recipient's username"
+                                aria-describedby="basic-addon2"
+                                onChange={this.handleChangeTextSearch}
+                                id="key"
+                            />
+                            <Button variant="outline-secondary" id="button-addon2" onClick={() => this.ClickSearch()}>
+                                Button
+                            </Button>
+                        </InputGroup>
+                    </Row>
+                    <Row>
+                        {this.state.postData}
+                    </Row>
+                </Container>
+                <div className="align-paging">
+                    <ReactPaginate
+                        previousLabel={"<<"}
+                        nextLabel={">>"}
+                        breakLabel={"..."}
+                        breakClassName={"break-me"}
+                        pageCount={this.state.pageCount}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={5}
+                        onPageChange={this.handlePageClick}
+                        containerClassName={"pagination"}
+                        subContainerClassName={"pages pagination"}
+                        activeClassName={"active"}
+                        pageClassName={"page-item"}
+                        pageLinkClassName={"page-link"}
+                        previousClassName={"page-item"}
+                        previousLinkClassName={"page-link"}
+                        nextClassName={"page-item"}
+                        nextLinkClassName={"page-link"}
+                    />
+                </div>
 
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
-
+            </div>
         )
     }
 }
@@ -280,4 +219,4 @@ const mapsDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapsStateToProps, mapsDispatchToProps)(UserAjukan1)
+export default connect(mapsStateToProps, mapsDispatchToProps)(PagingSearcHouse)

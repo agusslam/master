@@ -4,8 +4,8 @@ import Cookies from 'universal-cookie'
 const cookies = new Cookies()
 const token = cookies.get('_tKJKASKHDS')
 
-const API_URL = 'https://apiauthv1.herokuapp.com'
-// const API_URL = 'http://localhost:8008'
+// const API_URL = 'https://apiauthv1.herokuapp.com'
+const API_URL = 'http://localhost:8008'
 const Header = { headers: { Authorization: `Bearer ${token}` } }
 
 export const getRumah = () => async (dispatch) => {
@@ -131,6 +131,19 @@ export const getKPR = () => async (dispatch) => {
         console.log(res.data)
         dispatch({ type: 'CHANGE_LOADING', value: false })
         dispatch({ type: 'GET_KPR', value: res.data })
+        return Promise.resolve(res.data)
+    } catch (error) {
+        return Promise.reject(error)
+    }
+}
+
+export const getSearchrumah = (data) => async (dispatch) => {
+    try {
+        dispatch({ type: 'CHANGE_LOADING', value: true })
+        const res = await Axios.post(API_URL + '/house/search', { key: data })
+        // console.log(res)
+        dispatch({ type: 'CHANGE_LOADING', value: false })
+        dispatch({ type: 'GET_RUMAH', value: res.data })
         return Promise.resolve(res.data)
     } catch (error) {
         return Promise.reject(error)
