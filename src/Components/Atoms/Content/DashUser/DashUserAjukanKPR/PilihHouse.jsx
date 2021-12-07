@@ -55,22 +55,22 @@ class UserAjukan1 extends React.Component {
                     <Row className="centang">
                         <Col md="12"><FontAwesomeIcon style={{ display: 'none' }} id={`idcent${item._id}`} className="cek" icon={faCheckCircle} size='3x'></FontAwesomeIcon></Col>
                     </Row>
-                    <Row className="wrap-list-rumah-paging">
-                        <Col md="12" className="img-rumah-paging" style={{
+                    <Row className="wrap-list-rumah">
+                        <Col md="12" className="img-rumah" style={{
                             // backgroundImage: "url(" + API_URL_IMG + item.image + "" + ")",
                             backgroundImage: `url(${API_URL_IMG}/${item.image})`,
                             backgroundPosition: 'top',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat'
                         }}></Col>
-                        <Col md="12" className="title-home-paging">
-                            <h6 >{item.namarumah}</h6>
-                            <p className="title-dev-paging">Alamat : {item.alamat}</p>
-                            <p className="harga-list-paging">Rp {(parseFloat(item.harga)).toLocaleString()},00</p>
-                            <p className="title-dev-paging">Developer : {item.developer.namadeveloper}</p>
-                            <p className="title-dev-paging">Detail :</p>
-                            <p className="title-dev-paging">- LT {item.luas_tanah} m2 / LB {item.luas_bangunan} m2</p>
-                            <p className="title-dev-paging">- Kamar : {item.jumlah_kamar}</p>
+                        <Col md="12" className="title-home">
+                            <h6>{item.namarumah}</h6>
+                            <p className="title-dev">Alamat : {item.alamat}</p>
+                            <p className="harga-list">Rp {(parseFloat(item.harga)).toLocaleString()},00</p>
+                            <p className="title-dev">Developer : {item.developer.namadeveloper}</p>
+                            <p className="title-dev">Detail :</p>
+                            <p className="title-dev">- LT {item.luas_tanah} m2 / LB {item.luas_bangunan} m2</p>
+                            <p className="title-dev">- Kamar : {item.jumlah_kamar}</p>
                         </Col>
                     </Row>
                 </Col>
@@ -131,22 +131,22 @@ class UserAjukan1 extends React.Component {
                     <Row className="centang">
                         <Col md="12"><FontAwesomeIcon style={{ display: 'none' }} id={`idcent${item._id}`} className="cek" icon={faCheckCircle} size='3x'></FontAwesomeIcon></Col>
                     </Row>
-                    <Row className="wrap-list-rumah-paging">
-                        <Col md="12" className="img-rumah-paging" style={{
+                    <Row className="wrap-list-rumah">
+                        <Col md="12" className="img-rumah" style={{
                             // backgroundImage: "url(" + API_URL_IMG + item.image + "" + ")",
                             backgroundImage: `url(${API_URL_IMG}/${item.image})`,
                             backgroundPosition: 'top',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat'
                         }}></Col>
-                        <Col md="12" className="title-home-paging">
-                            <h6 >{item.namarumah}</h6>
-                            <p className="title-dev-paging">Alamat : {item.alamat}</p>
-                            <p className="harga-list-paging">Rp {(parseFloat(item.harga)).toLocaleString()},00</p>
-                            <p className="title-dev-paging">Developer : {item.developer.namadeveloper}</p>
-                            <p className="title-dev-paging">Detail :</p>
-                            <p className="title-dev-paging">- LT {item.luas_tanah} m2 / LB {item.luas_bangunan} m2</p>
-                            <p className="title-dev-paging">- Kamar : {item.jumlah_kamar}</p>
+                        <Col md="12" className="title-home">
+                            <h6>{item.namarumah}</h6>
+                            <p className="title-dev">Alamat : {item.alamat}</p>
+                            <p className="harga-list">Rp {(parseFloat(item.harga)).toLocaleString()},00</p>
+                            <p className="title-dev">Developer : {item.developer.namadeveloper}</p>
+                            <p className="title-dev">Detail :</p>
+                            <p className="title-dev">- LT {item.luas_tanah} m2 / LB {item.luas_bangunan} m2</p>
+                            <p className="title-dev">- Kamar : {item.jumlah_kamar}</p>
                         </Col>
                     </Row>
                 </Col>
@@ -276,7 +276,8 @@ const mapsDispatchToProps = (dispatch) => {
         setDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: true }),
         setTextDialog: (data) => dispatch({ type: 'CHANGE_TEXTDIALOG', value: data }),
         setCloseDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: false }),
-        getSearchRumah: (data) => dispatch(getSearchrumah(data))
+        getSearchRumah: (data) => dispatch(getSearchrumah(data)),
+        changeLoad: () => dispatch({ type: 'CHANGE_LOADING', value: false })
     }
 }
 

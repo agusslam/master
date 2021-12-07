@@ -6,6 +6,7 @@ import SignIn from './Components/Signin/Signin'
 import SignUp from './Components/Signup/Signup'
 import ConTact from './Components/Contact/Contact'
 import AboutUS from './Components/AboutUs/AboutUs'
+import PageKpr from './Components/KPR/KPR'
 
 import DashUser from './Components/DashboardUser/Dashboard'
 import DashUserAjukanKpr from './Components/DashboardUser/PilihRumah'
@@ -17,8 +18,6 @@ import DashboardSimul from './Components/DashboardUser/SimulasiKPR'
 import DashAdmin from './Components/DashboardAdmin/Dashboard'
 import DashAdminDet from './Components/DashboardAdmin/DetailList'
 import DashAdminLis from './Components/DashboardAdmin/ListSaya'
-
-import Paging from './Components/Atoms/Content/DashUser/DashUserAjukanKPR/PagingSearchHouse'
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -44,7 +43,7 @@ class Routes extends React.Component {
                             <Route exact path="/dashboardlistadmin" component={DashAdminLis} ></Route>
                             <Route exact path="/contact" component={ConTact} ></Route>
                             <Route exact path="/tentang" component={AboutUS} ></Route>
-                            <Route exact path="/paginghouse" component={Paging} ></Route>
+                            <Route exact path="/kpr" component={PageKpr} ></Route>
                         </Fragment>
                     </Switch>
                 </Router> 

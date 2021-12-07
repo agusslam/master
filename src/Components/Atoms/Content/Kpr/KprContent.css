@@ -1,0 +1,120 @@
+.bg-kpr {
+    background-color: #f9f7f5;
+}
+
+.bg-kpr .wrap-title-cari {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.bg-kpr .wrap-title-cari h1 {
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.bg-kpr .wrap-desc-cari {
+    text-align: center;
+}
+
+.bg-kpr .wrap-desc-cari p {
+    color: #000000;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.wrapper-dashburd .wrapper-side-right .wrapper-side-right1 .wrap-ajukan .list-rumah .wrap-list-rumah .img-rumah {
+    height: 140px;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+
+.bg-kpr .wrap-carusel {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.bg-kpr .wrap-carusel .card-house {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bg-kpr .wrap-carusel .card-house .wrap-list-carusel {
+    line-height: 10px;
+    padding-bottom: 5px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #f7e7bc 75%, #ffbc00);
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
+.bg-kpr .wrap-carusel .card-house .wrap-list-carusel .img-rumah-carusel {
+    height: 140px;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+
+.title-home-carusel h6 {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.harga-list-carusel {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 0;
+}
+
+.title-dev-carusel {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 5px;
+    line-height: 0;
+}
+
+.bg-kpr .wrap-simulasi {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50px;
+}
+
+.bg-kpr .wrap-simulasi .wrap-simulasi-content {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.bg-kpr .wrap-simulasi .wrap-simulasi-content .wrap-title {
+    padding-left: 10%;
+    padding-top: 10px;
+}
+
+.text-left-simul {
+    text-align: right;
+}
+
+.bg-kpr .wrap-simulasi .wrap-simulasi-content .input-width {
+    width: 250px;
+}
+
+.bg-kpr .wrap-simulasi .wrap-simulasi-content .input-width-2 {
+    width: 140px;
+}
+
+.bg-kpr .wrap-simulasi .wrap-simulasi-content .wrap-button-simul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.bg-kpr .wrap-simulasi .wrap-simulasi-content .input-width-simul {
+    width: 200px;
+    border: 1px solid grey;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    height: 30px;
+}

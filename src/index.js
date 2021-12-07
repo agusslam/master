@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import Routes from './Router';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 ReactDOM.render(
   <React.StrictMode>
