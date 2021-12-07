@@ -86,3 +86,63 @@
 .wrap-connect a:hover {
     color: black;
 }
+
+/* responsive */
+@media only screen and (max-width : 1253px) {
+    .footer p {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #000000 !important;
+        margin-left: 10px;
+        font-weight: bold;
+        line-height: 10px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 1111px) {
+    .footer p {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #000000 !important;
+        margin-left: 10px;
+        font-weight: bold;
+        line-height: 10px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 1046px) {
+    .footer .logoBukopin .img-foot {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width : 968px) {
+    .footer p {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #000000 !important;
+        margin-left: 10px;
+        font-weight: bold;
+        line-height: 10px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width : 834px) {
+    .footer p {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #000000 !important;
+        margin-left: 10px;
+        font-weight: bold;
+        line-height: 10px;
+        font-size: 8px;
+    }
+
+    .style-iconbrand {
+        margin-left: 8px;
+        margin-right: 8px;
+        color: black;
+    }
+
+}
+
+

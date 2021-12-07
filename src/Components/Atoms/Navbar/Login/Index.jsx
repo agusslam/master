@@ -6,10 +6,6 @@ import '../Login/Login.css'
 import logo from '../../../../Assets/Images/logo-kbnobg.png'
 
 class NavbarLogin extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    //     console.log(props)
-    // }
     render() {
         const homeClass = this.props.location.pathname === "/" ? "activeX" : "style-nav";
         const kprClass = this.props.location.pathname.match(/^\/kpr/) ? "activeX" : "style-nav";
@@ -19,7 +15,7 @@ class NavbarLogin extends React.Component {
         const registerClass = this.props.location.pathname.match(/^\/register/) ? "style-nav-orange-active" : "style-nav-orange";
 
         return (
-            <Container fluid={true} className="p-0">
+            <Container fluid={true}>
                 <Navbar id="navbar2">
                     <Nav className="logo-white"><img src={logo} alt="Logo" /></Nav>
                     <Nav className="menu">
