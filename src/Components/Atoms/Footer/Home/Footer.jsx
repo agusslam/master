@@ -15,7 +15,7 @@ class Foot extends React.Component {
                 <Row className="footer">
                     <Col md="4">
                         <p></p>
-                        <p><a href="/simulasi" className="link-footer">Simulasi KPR</a></p>
+                        <p><a href="/kpr" className="link-footer">Simulasi KPR</a></p>
                         <p><a href="/tentang" className="link-footer">About Us</a></p>
                         <p><a href="/contact" className="link-footer">Contact</a></p>                        
                     </Col>
