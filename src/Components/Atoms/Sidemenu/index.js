@@ -29,7 +29,7 @@ class SideMenu extends React.Component {
                         <NavLink className={ajukanClass} exact="true" href="/ajukankpr"><img className="ico" src={icoAjukan} alt="ajukan" />Ajukan KPR</NavLink>
                     </Col>
                     <Col md="12" className="wrap-ico">
-                        <NavLink className={bukopinClass} exact="true" href="/bukopin"><img className="ico" src={icoOur} alt="dashboard" />Situs Web</NavLink>
+                        <NavLink className={bukopinClass} exact="true" href="/"><img className="ico" src={icoOur} alt="dashboard" />Situs Web</NavLink>
                     </Col>
                     <Col md="12" className="wrap-ico">
                         <NavLink className={tentangClass} exact="true" href="/tentang"><img className="ico" src={icoAbout} alt="dashboard" />Tentang Kami</NavLink>

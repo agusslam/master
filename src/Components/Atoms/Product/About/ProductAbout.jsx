@@ -28,7 +28,7 @@ class ProductHome extends React.Component {
                             <Col md="12" className="title-class2 text-center">
                                 <h6 style={{ fontWeight: 'bold' }}>SIMULASI KPR</h6>
                                 <p>Ragu tidak bisa beli rumah?, bisa coba simulasi disini</p>
-                                <a href="/simulasi" className="view-detail">Coba Simulasi</a>
+                                <a href="/kpr" className="view-detail">Coba Simulasi</a>
                             </Col>
                         </Row>
                     </Col>
@@ -40,7 +40,7 @@ class ProductHome extends React.Component {
                             <Col md="12" className="title-class2 text-center">
                                 <h6 style={{ fontWeight: 'bold' }}>CARI RUMAH</h6>
                                 <p>Jaringan kerjasama yang luas dengan developer</p>
-                                <a href="/simulasi" className="view-detail">Cari Sekarang</a>
+                                <a href="/kpr" className="view-detail">Cari Sekarang</a>
                             </Col>
                         </Row>
                     </Col>
