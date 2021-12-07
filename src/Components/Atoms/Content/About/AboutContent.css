@@ -13,8 +13,23 @@
     font-family: 'Nunito Sans', sans-serif;
     padding-bottom: 25px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position:left;
+}
+
+.wrap-detail-tentang {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.wrap-detail-tentang .wrap-bg-tentang {
+    height: auto;
+    background-color: #f9f7f5;
+}
+
+.wrap-detail-tentang .wrap-bg-tentang .wrapper-paragraf {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .wrap-text-tentang {

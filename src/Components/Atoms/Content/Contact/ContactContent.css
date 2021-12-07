@@ -46,6 +46,27 @@
     padding-top: 20px;
 }
 
+.wrap-detail-contact {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.wrap-detail-contact .wrap-bg-contact {
+    height: auto;
+    background-color: #f9f7f5;
+}
+
+.wrap-detail-contact .wrap-bg-contact .wrapper-paragraf {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.wrap-detail-contact .wrap-bg-contact a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
 .wrap-text-contact {
     padding-left: 20%;
     padding-right: 20%;

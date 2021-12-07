@@ -37,7 +37,7 @@ class Regis extends React.Component {
             this.props.setTextDialog('Nama lengkap wajib diisi')
         } else if (!username) {
             this.props.setDialog()
-            this.props.setTextDialog('Username wajib diisi')
+            this.props.setTextDialog('Nama Pengguna wajib diisi')
         } else if (!email) {
             this.props.setDialog()
             this.props.setTextDialog('Email wajib diisi')
@@ -46,16 +46,16 @@ class Regis extends React.Component {
             this.props.setTextDialog('Email tidak valid')
         } else if (!phone) {
             this.props.setDialog()
-            this.props.setTextDialog('Phone wajib diisi')
+            this.props.setTextDialog('Telepon wajib diisi')
         } else if (Validator.isMobilePhone(phone) === false) {
             this.props.setDialog()
-            this.props.setTextDialog('Phone tidak valid')
+            this.props.setTextDialog('Telepon tidak valid')
         } else if (!password) {
             this.props.setDialog()
-            this.props.setTextDialog('Password wajib diisi')
+            this.props.setTextDialog('Sandi wajib diisi')
         } else if (!isOK) {
             this.props.setDialog()
-            this.props.setTextDialog('Password wajib terdiri dari huruf Besar, kecil, angka dan (!@#.,)')
+            this.props.setTextDialog('Sandi wajib terdiri dari huruf Besar, kecil, angka dan (!@#.,)')
         } else {
             const resRegister = await this.props.registerAPI({
                 username, password, nama, email, phone
@@ -107,7 +107,7 @@ class Regis extends React.Component {
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                    <Form.Label>Username</Form.Label>
+                                    <Form.Label>Nama Pengguna</Form.Label>
                                     <Form.Control
                                         type="text"
                                         className="form-input"
@@ -129,7 +129,7 @@ class Regis extends React.Component {
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                    <Form.Label>Phone</Form.Label>
+                                    <Form.Label>Telepon</Form.Label>
                                     <Form.Control
                                         type="text"
                                         className="form-input"

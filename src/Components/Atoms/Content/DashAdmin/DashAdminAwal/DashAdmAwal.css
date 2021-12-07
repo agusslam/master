@@ -37,11 +37,11 @@
 }
 
 .style-table:hover {
-    background-color: #ffbc00;
+    background-color: #707070;
     cursor: pointer;
 }
 
 .style-table-active {
-    background-color: #ffbc00 !important;
+    background-color: #707070 !important;
     cursor: pointer;
 }

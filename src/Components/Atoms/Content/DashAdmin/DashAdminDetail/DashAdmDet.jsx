@@ -17,8 +17,8 @@ import ModalDialog from '../../../Modals/Alert'
 const cookies = new Cookies()
 const token = cookies.get('_tKJKASKHDS')
 
-// const API_URL = "https://apiauthv1.herokuapp.com"
-const API_URL = "http://localhost:8008"
+const API_URL = "https://apiauthv1.herokuapp.com"
+// const API_URL = "http://localhost:8008"
 
 class DashborAdminDeta extends React.Component {
     state = {

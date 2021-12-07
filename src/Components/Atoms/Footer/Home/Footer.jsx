@@ -16,8 +16,8 @@ class Foot extends React.Component {
                     <Col md="4">
                         <p></p>
                         <p><a href="/kpr" className="link-footer">Simulasi KPR</a></p>
-                        <p><a href="/tentang" className="link-footer">About Us</a></p>
-                        <p><a href="/contact" className="link-footer">Contact</a></p>                        
+                        <p><a href="/tentang" className="link-footer">Tentang Kami</a></p>
+                        <p><a href="/contact" className="link-footer">Kontak</a></p>                        
                     </Col>
                     <Col md="4">
                         <p>KANTOR PUSAT</p>
@@ -26,7 +26,7 @@ class Foot extends React.Component {
                         <p>Phone. +6221 798 8266, 798 9837</p>
                         <p>Fax. +6221 798 0625, 798 0238, 798 0244</p>
                         <Row className="wrap-connect">
-                            <Col md="3" className="style-connect"><p>Connect</p></Col>
+                            <Col md="3" className="style-connect"><p>Terhubung</p></Col>
                             <Col md="1" className="style-iconbrand"><a href="https://www.facebook.com/kbbukopin"><FontAwesomeIcon icon={faFacebook} size='2x' /></a></Col>
                             <Col md="1" className="style-iconbrand"><a href="https://twitter.com/kbbukopin"><FontAwesomeIcon icon={faTwitter} size='2x' /></a></Col>
                             <Col md="1" className="style-iconbrand"><a href="https://www.youtube.com/user/SiagaBukopin"><FontAwesomeIcon icon={faYoutube} size='2x' /></a></Col>

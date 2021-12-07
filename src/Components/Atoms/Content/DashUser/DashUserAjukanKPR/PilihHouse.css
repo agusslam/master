@@ -119,6 +119,12 @@
     animation-iteration-count: 1;
 }
 
+.align-paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @-webkit-keyframes swing
 {
     15%

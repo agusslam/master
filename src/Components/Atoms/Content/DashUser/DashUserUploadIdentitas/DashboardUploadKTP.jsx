@@ -25,6 +25,7 @@ import Panjang2 from '../../../Panjang/Panjang2'
 import Panjang3 from '../../../Panjang/Panjang3'
 
 import { Uploadktp, Uploadfoto } from '../../../../../Actions/kpr'
+import '../DashUserUploadIdentitas/DashboardUploadKTP.css'
 
 const cookies = new Cookies()
 

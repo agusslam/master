@@ -78,7 +78,7 @@ class SignIn extends React.Component {
                     <Col md="12" className="wrap-login">
                         <Row className="wrap-box2">
                             <Col md="8"></Col>
-                            <Col md="4"><h1 className="title-signup">Sign In</h1></Col>
+                            <Col md="4"><h1 className="title-signup">Masuk</h1></Col>
                             <Col md="8"></Col>
                             <Col md="4" className="wrap-logo-brand">
                                 <Row>
@@ -101,25 +101,25 @@ class SignIn extends React.Component {
                                     </Col>
                                     <Col md="12" className="style-inp-login">
                                         <Form.Group className="mb-3">
-                                            <Form.Label>Username</Form.Label>
+                                            <Form.Label>Nama Pengguna</Form.Label>
                                             <Form.Control
                                                 type="text"
                                                 className="form-input"
                                                 name="username"
                                                 onChange={this.handleChangeText}
                                                 id="username"
-                                                placeholder="Masukkan username"
+                                                placeholder="Masukkan nama pengguna"
                                             />
                                         </Form.Group>
                                         <Form.Group className="mb-3">
-                                            <Form.Label>Password</Form.Label>
+                                            <Form.Label>Sandi</Form.Label>
                                             <Form.Control
                                                 type="password"
                                                 className="form-input"
                                                 name="password"
                                                 onChange={this.handleChangeText}
                                                 id="password"
-                                                placeholder="Masukkan password "
+                                                placeholder="Masukkan sandi"
                                             />
                                         </Form.Group>
                                     </Col>
@@ -130,7 +130,7 @@ class SignIn extends React.Component {
                                         </Row>
                                     </Col>
                                     <Col md="12" className="style-but">
-                                        {<Button className="btn-submit" onClick={this.handleSignIn} title={'Sign In'} loading={this.props.isLoading} />}
+                                        {<Button className="btn-submit" onClick={this.handleSignIn} title={'Masuk'} loading={this.props.isLoading} />}
                                     </Col>
                                 </Row>
                             </Col>
