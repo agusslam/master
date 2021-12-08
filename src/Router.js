@@ -40,7 +40,7 @@ class Routes extends React.Component {
                             <Route exact path="/simulasi" component={DashboardSimul} ></Route>
                             <Route exact path="/dashboardadmin" component={DashAdmin} ></Route>
                             <Route exact path="/dashboardlistadmin/detail/:id" component={DashAdminDet} ></Route>
-                            <Route exact path="/dashboardlistadmin" component={DashAdminLis} ></Route>
+                            <Route exact path="/monitor" component={DashAdminLis} ></Route>
                             <Route exact path="/contact" component={ConTact} ></Route>
                             <Route exact path="/tentang" component={AboutUS} ></Route>
                             <Route exact path="/kpr" component={PageKpr} ></Route>
