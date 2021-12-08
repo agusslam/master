@@ -11,10 +11,10 @@ class HomeInf extends React.Component {
                 backgroundImage: `url(${bg_info})`, backgroundSize: 'cover' 
                 }}>
                 <Row className="wrapper-homeinfo">
-                    <Col md="12" className="text-center">
+                    <Col sm="12" md="12" className="text-center">
                         <p className="title-info">INFORMASI PRODUK KPR KB BUKOPIN</p>
                     </Col>
-                    <Col md="12">
+                    <Col sm="12" md="12">
                         <Accordion>
                             <Accordion.Item eventKey="0" className="accor-info">
                                 <Accordion.Header><strong>SYARAT DAN KETENTUAN</strong></Accordion.Header>
@@ -50,7 +50,7 @@ class HomeInf extends React.Component {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col md="12" className="bottom-info">
+                    <Col sm="12" md="12" className="bottom-info">
                     </Col>
                 </Row>
             </Container>

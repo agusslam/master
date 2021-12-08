@@ -22,3 +22,38 @@
 .bottom-info {
     height: 50px;
 }
+
+@media only screen and (max-width : 1127px) { 
+    .wrapper-homeinfo .title-info{
+        font-size: 30px;
+        color: #ffbc00;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+@media only screen and (max-width : 943px) { 
+    .wrapper-homeinfo .title-info{
+        font-size: 25px;
+        color: #ffbc00;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+@media only screen and (max-width : 852px) { 
+    .wrapper-homeinfo .title-info{
+        font-size: 20px;
+        color: #ffbc00;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+@media only screen and (max-width : 766px) { 
+    .wrapper-homeinfo {
+        padding-top: 10%;
+        padding-left: 185px;
+        padding-right: 185px;
+        /* background-color: #545045; */
+        /* margin-bottom: 10px; */
+        height:auto;
+    }
+}

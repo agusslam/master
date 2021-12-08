@@ -62,18 +62,12 @@ class Regis extends React.Component {
             }).catch(err => err)
             if (resRegister.status === 200) {
                 this.props.setDialog()
-                this.props.setTextDialog('Registrasi Berhasil')
-                this.setState = {
-                    username: '',
-                    password: '',
-                    nama: '',
-                    email: '',
-                    phone: '',
-                }
+                this.props.setTextDialog('Registrasi Berhasil')                 
+                window.location.href = '/signin'
             } else {
                 this.props.setDialog()
                 this.props.setTextDialog('Registrasi Gagal')
-                this.props.changeLoad()
+                window.location.href = '/register'
             }
         }
 
@@ -136,11 +130,11 @@ class Regis extends React.Component {
                                         name="phone"
                                         onChange={this.handleChangeText}
                                         id="phone"
-                                        placeholder="Masukkan nomor seluler"
+                                        placeholder="Masukkan nomor telepon"
                                     />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                    <Form.Label>Password</Form.Label>
+                                    <Form.Label>Sandi</Form.Label>
                                     <Form.Control
                                         type="password"
                                         className="form-input"
@@ -174,7 +168,9 @@ const mapsDispatchToProps = (dispatch) => ({
     setDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: true }),
     setTextDialog: (data) => dispatch({ type: 'CHANGE_TEXTDIALOG', value: data }),
     setCloseDialog: () => dispatch({ type: 'CHANGE_DIALOG', value: false }),
-    changeLoad: () => dispatch({ type: 'CHANGE_LOADING', value: false })
+    changeLoad: () => dispatch({ type: 'CHANGE_LOADING', value: false }),
+    setDialog3: () => dispatch({ type: 'CHANGE_DIALOG_REDI', value: true }),
+    setTextDialog3: (data) => dispatch({ type: 'CHANGE_TEXTDIALOG3', value: data }),
 })
 
 export default connect(mapsStateToProps, mapsDispatchToProps)(Regis)

@@ -64,3 +64,40 @@
     font-family: 'Nunito Sans', sans-serif;
     text-align: center;
 }
+
+@media only screen and (max-width : 1275px) { 
+    .list-style .wrapper-box-detail-home .wrapper-box-list-home .tittle-class p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 1200px) { 
+    .list-style .wrapper-box-detail-home .wrapper-box-list-home .tittle-class p{
+        font-size: 12px;
+    }
+    .list-style .wrapper-box-detail-home .wrapper-box-list-home .tittle-class h6{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 925px) { 
+    .list-style .wrapper-box-detail-home .wrapper-box-list-home .tittle-class p{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width : 785px) { 
+    .list-style .wrapper-box-detail-home .wrapper-box-list-home .tittle-class p{
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width : 767px) { 
+    .list-style .wrapper-box-detail-home .wrapper-box-list-home .tittle-class p{
+        font-size: 14px;
+    }
+
+    .list-style .wrapper-box-detail-home .wrapper-box-list-home .tittle-class h6{
+        font-size: 18px;
+    }
+}

@@ -86,3 +86,97 @@
     font-weight: 500;
     text-decoration: none;
 }
+
+/* responsive */
+@media only screen and (max-width : 1047px) { 
+    .view-detail {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #e39906;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    
+    .view-detail:hover {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #8a5f08;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .title-class2 h6 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 20px;
+    }
+    
+    .title-class2 p {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width : 788px) { 
+    .view-detail {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #e39906;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    
+    .view-detail:hover {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #8a5f08;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .title-class2 h6 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 16px;
+    }
+    
+    .title-class2 p {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width : 767px) { 
+    .view-detail {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #e39906;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    
+    .view-detail:hover {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #8a5f08;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .title-class2 h6 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 20px;
+    }
+    
+    .title-class2 p {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 16px;
+    }
+
+}
